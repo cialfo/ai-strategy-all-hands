@@ -24,7 +24,7 @@
           <div class="dots"></div>
           <div class="s1-content">
             <div class="mg-frame" style="display:inline-flex;align-items:center;justify-content:center;padding:2rem;">
-              <img src="https://raw.githubusercontent.com/cialfo/manifest-product-all-hands/main/Assets/Manifest-Global--Horizontal-Logo-SVG.png"
+              <img src="Assets/Manifest-Global--Horizontal-Logo-SVG.png"
                    alt="Manifest Global"
                    style="width:680px;height:auto;display:block;" />
             </div>
@@ -66,17 +66,23 @@
         const esc = (s) =>
           String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-        let html = "";
-        enabledIds.forEach((id) => {
+        const parts = [];
+        let displayNum = 1;
+        for (const id of enabledIds) {
           const story = window.AH26.findStory(id);
-          if (!story) return;
-          html += `<a class="ag-card-v2" href="${esc(story.file)}">
-            <div class="ag-card-title">${esc(story.title)}</div>
-            <div class="ag-card-author">${esc(story.author)}</div>
-          </a>`;
-        });
-
-        grid.innerHTML = html;
+          if (!story) continue;
+          const num = String(displayNum).padStart(2, "0");
+          parts.push(
+            `<a class="ag-link" href="${esc(story.file)}" data-topic="${esc(id)}">` +
+            `<div class="ag-card">` +
+            `<div class="ag-num">${num}</div>` +
+            `<div class="ag-name">${esc(story.title)}</div>` +
+            `<div class="ag-speaker">${esc(story.author)}</div>` +
+            `</div></a>`
+          );
+          displayNum++;
+        }
+        grid.innerHTML = parts.join("");
       })();
     </script>
   </body>
