@@ -266,7 +266,7 @@
       const back = document.createElement("a");
       back.href = backHref;
       back.style.cssText = btnBase + ";left:20px";
-      back.innerHTML = "&larr;&nbsp;&nbsp;How Manifest Runs";
+      back.innerHTML = "&larr;&nbsp;&nbsp;AI-Native Shift";
       back.addEventListener("mouseenter", () => {
         back.style.borderColor = "rgba(var(--accent-rgb),.6)";
         back.style.color = "var(--text-primary)";
@@ -284,7 +284,7 @@
       next.href = nextHref;
       next.style.cssText = btnBase + ";right:20px";
       const label =
-        /index\.html$/.test(nextHref) && !/#/.test(nextHref) ? "Back to Start" : "Next Chapter";
+        /index\.html$/.test(nextHref) && !/#/.test(nextHref) ? "Back to Start" : "Next Shift";
       next.innerHTML = label + "&nbsp;&nbsp;&rarr;";
       next.addEventListener("mouseenter", () => {
         next.style.borderColor = "rgba(var(--accent-rgb),.6)";
