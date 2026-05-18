@@ -327,32 +327,6 @@
     document.body.appendChild(mkBtn(1));
   }
 
-  // Theme toggle (light/dark) — persisted to localStorage key "ah26_theme"
-  (function buildThemeToggle() {
-    const themeBtn = document.createElement("button");
-    themeBtn.id = "theme-btn";
-    themeBtn.type = "button";
-    themeBtn.setAttribute("aria-label", "Toggle light/dark theme");
-    const isLight = () => document.documentElement.classList.contains("theme-light");
-    const setIcon = () => {
-      themeBtn.innerHTML = isLight() ? "&#9790;" : "&#9728;";
-    };
-    setIcon();
-    themeBtn.addEventListener("click", () => {
-      const next = isLight() ? "dark" : "light";
-      document.documentElement.classList.toggle("theme-light", next === "light");
-      try {
-        localStorage.setItem("ah26_theme", next);
-      } catch (e) {
-        // ignore
-      }
-      setIcon();
-      if (typeof window.__ah26_updateSectionLogo === "function") {
-        window.__ah26_updateSectionLogo();
-      }
-    });
-    document.body.appendChild(themeBtn);
-  })();
 
   // Initialize any carousels present on this page
   [
