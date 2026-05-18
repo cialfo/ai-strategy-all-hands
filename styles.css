@@ -508,12 +508,12 @@ body {
 .divider-frame {
   border: 2.5px solid rgba(var(--accent-rgb), 1);
   border-radius: 20px;
-  padding: 1.4rem 5rem;
+  padding: 2rem 6.5rem;
   width: 100%;
 }
 .divider-title {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 66px;
+  font-size: 82px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
