@@ -26,15 +26,15 @@
         margin-bottom: 4px;
         margin-top: 0.55rem;
       }
-      .shift-col-head.old { color: #888; border-color: #ccc; }
+      .shift-col-head.old { color: var(--text-secondary); border-color: var(--neutral-panel-hi); }
       .shift-col-head.warm { color: var(--accent); border-color: var(--accent); }
       .shift-table { display: flex; flex-direction: column; width: 100%; }
       .shift-row {
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 6px 0;
-        border-bottom: 0.5px solid rgba(0,0,0,0.07);
+        padding: 9px 0;
+        border-bottom: 1px solid var(--neutral-panel-hi);
       }
       .shift-row:last-child { border-bottom: none; }
       .shift-num {
@@ -43,11 +43,11 @@
         font-weight: 600;
         min-width: 16px;
       }
-      .shift-num.old { color: #bbb; }
+      .shift-num.old { color: var(--text-faint); }
       .shift-num.warm { color: rgba(var(--accent-rgb), 0.35); }
       .shift-text {
         font-family: "Cormorant Garamond", serif;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 600;
         color: var(--text-primary);
         flex: 1;
@@ -63,7 +63,7 @@
         border-radius: 4px;
         white-space: nowrap;
       }
-      .role-tag.old { background: #f3ead0; color: #7a5c00; }
+      .role-tag.old { background: var(--neutral-panel); color: var(--text-secondary); }
       .role-tag.warm { background: rgba(var(--accent-rgb), 0.08); color: var(--accent); }
 
       /* Slides 5A & 5B squad map */
@@ -94,8 +94,8 @@
         max-width: 620px;
       }
       .manifest-card {
-        background: #fff;
-        border: 0.5px solid rgba(var(--accent-rgb), 0.25);
+        background: rgba(var(--accent-rgb), 0.02);
+        border: 1px solid rgba(var(--accent-rgb), 0.28);
         border-radius: 10px;
         padding: 1.2rem 1.4rem;
         display: flex;
@@ -103,7 +103,7 @@
       }
       .manifest-card-name {
         font-family: "Cormorant Garamond", serif;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 700;
         color: var(--text-primary);
         margin-bottom: 4px;
@@ -115,17 +115,18 @@
         color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        margin-bottom: 8px;
-      }
-      .manifest-card-outcome {
-        font-family: "Montserrat", sans-serif;
-        font-size: 11px;
-        color: #666;
-        line-height: 1.5;
         margin-bottom: 10px;
       }
+      .manifest-card-outcome {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
       .manifest-card-divider {
-        border-top: 0.5px solid #e8e0cc;
+        border-top: 1px solid rgba(var(--accent-rgb), 0.15);
         padding-top: 8px;
       }
       .manifest-card-projects-label {
@@ -134,28 +135,27 @@
         font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #999;
+        color: var(--text-muted);
         margin-bottom: 5px;
       }
       .manifest-card-projects-list {
         font-family: "Montserrat", sans-serif;
-        font-size: 10px;
-        color: #555;
+        font-size: 12px;
+        color: var(--text-secondary);
         line-height: 1.8;
       }
 
       /* 5B — BU grid */
       .bu-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
         width: 100%;
-        max-width: 960px;
       }
       .bu-col { display: flex; flex-direction: column; }
       .bu-col-label {
         font-family: "Montserrat", sans-serif;
-        font-size: 9px;
+        font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -164,25 +164,25 @@
         text-align: center;
       }
       .bu-squad {
-        background: #fff;
-        border: 0.5px solid rgba(0,0,0,0.1);
-        border-radius: 7px;
+        background: rgba(var(--accent-rgb), 0.02);
+        border: 1px solid rgba(var(--accent-rgb), 0.2);
+        border-radius: 10px;
         padding: 7px 10px;
         margin-bottom: 7px;
       }
       .bu-squad:last-child { margin-bottom: 0; }
       .bu-squad-name {
         font-family: "Cormorant Garamond", serif;
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 600;
         color: var(--text-primary);
         line-height: 1.2;
       }
       .bu-squad-metric {
         font-family: "Montserrat", sans-serif;
-        font-size: 9px;
-        color: #888;
-        margin-top: 2px;
+        font-size: 10px;
+        color: var(--text-secondary);
+        margin-top: 3px;
         line-height: 1.4;
       }
     </style>
@@ -248,13 +248,13 @@
                 <div class="connector alive"></div>
                 <div class="stage">
                   <div class="dot void"></div>
-                  <div class="slabel after" style="white-space:nowrap;">Features ship<br />Metrics don&#8217;t</div>
+                  <div class="slabel after">Features<br />ship<br /><span style="white-space:nowrap;">Metrics don&#8217;t</span></div>
                 </div>
               </div>
               <div class="words">
-                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:70px;font-weight:400;">Coordinated</div>
-                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:56px;font-weight:400;">Fragmented</div>
-                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:43px;font-weight:400;color:var(--accent);font-style:italic;">Lagging</div>
+                <div class="word">Coordinated</div>
+                <div class="word">Fragmented</div>
+                <div class="word">Lagging</div>
               </div>
             </div>
           </div>
@@ -313,14 +313,20 @@
             <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
-          <div class="inner" style="padding:1.6rem 2.8rem 1.4rem;justify-content:flex-start;align-items:stretch;">
+          <div class="inner" style="padding:2rem 2.8rem;">
             <div class="dots"></div>
-            <div style="display:flex;gap:1.2rem;width:100%;align-items:stretch;flex:1;">
+            <div class="play-zone stat-board" style="align-items:stretch;width:100%;max-width:none;padding:1.2rem 1.6rem;">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title" style="font-style:normal;">The AI-Native <span style="color:var(--accent)">Shift</span></div>
+              </div>
+              <div style="display:flex;flex-direction:row;gap:2rem;align-items:flex-start;">
 
               <!-- Old Way column -->
-              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0.65rem;">
-                <div style="display:flex;align-items:center;gap:0.75rem;">
-                  <div class="state-icon cold" style="flex-shrink:0;margin:0;">
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+                  <div class="state-icon cold" style="margin:0;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,100,100,0.8)" stroke-width="1.5">
                       <rect x="3" y="3" width="18" height="18" rx="2"/>
                       <path d="M3 9h18M9 21V9"/>
@@ -328,7 +334,7 @@
                   </div>
                   <div class="state-word" style="margin:0;">Old Way</div>
                 </div>
-                <div style="background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:0.8rem 1.1rem;flex:1;">
+                <div style="background:var(--neutral-panel);border:1px solid var(--neutral-panel-hi);border-radius:10px;padding:1rem 1.2rem;">
                   <div class="shift-col-head old">Process</div>
                   <div class="shift-table">
                     <div class="shift-row"><span class="shift-num old">01</span><span class="shift-text">Business sets the requirement</span><span class="role-tag old">Business</span></div>
@@ -343,8 +349,8 @@
                 </div>
               </div>
 
-              <!-- Arrow — sits at icon level -->
-              <div class="arrow-wrap" style="flex-shrink:0;padding-top:0.65rem;align-self:flex-start;">
+              <!-- Arrow — centred vertically -->
+              <div class="arrow-wrap" style="flex-shrink:0;align-self:center;margin-top:3.2rem;">
                 <div class="arrow-track relative">
                   <div class="arrow-tail"></div>
                   <div class="arrow-glow"></div>
@@ -354,16 +360,16 @@
               </div>
 
               <!-- New Way column -->
-              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0.65rem;">
-                <div style="display:flex;align-items:center;gap:0.75rem;">
-                  <div class="state-icon warm" style="flex-shrink:0;margin:0;">
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+                  <div class="state-icon warm" style="margin:0;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="rgba(204,0,0,0.9)" stroke-width="1.5">
                       <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
                     </svg>
                   </div>
                   <div class="state-word warm" style="margin:0;">New Way</div>
                 </div>
-                <div style="background:#fff;border:0.5px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:0.8rem 1.1rem;flex:1;">
+                <div style="background:rgba(var(--accent-rgb),0.02);border:1px solid rgba(var(--accent-rgb),0.28);border-radius:10px;padding:1rem 1.2rem;">
                   <div class="shift-col-head warm">Process</div>
                   <div class="shift-table">
                     <div class="shift-row"><span class="shift-num warm">01</span><span class="shift-text">Founder sets the outcome target</span><span class="role-tag warm">Founder</span></div>
@@ -376,6 +382,7 @@
                 </div>
               </div>
 
+              </div><!-- end columns row -->
             </div>
           </div>
         </div>
@@ -388,17 +395,21 @@
             <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
-          <div class="inner" style="padding:2.2rem 2.8rem 1.4rem;justify-content:flex-start;align-items:stretch;">
+          <div class="inner" style="padding:1.2rem 1.5rem;">
             <div class="dots"></div>
-            <div style="display:flex;flex-direction:column;width:100%;flex:1;gap:0.9rem;">
-                <div class="squad-page-title">Manifest-Level Squads</div>
-                <div class="manifest-level-row" style="max-width:100%;grid-template-columns:1fr 1fr;flex:1;align-items:stretch;">
+            <div class="play-zone stat-board" style="align-items:stretch;width:100%;max-width:none;padding:1.4rem 2rem;">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title">Manifest-Level <span style="color:var(--accent)">Squads</span></div>
+              </div>
+                <div class="manifest-level-row" style="max-width:100%;grid-template-columns:1fr 1fr 1fr;align-items:stretch;">
                   <div class="manifest-card">
                     <div class="manifest-card-name">Student Experience</div>
                     <div class="manifest-card-role">Builder + DRI</div>
                     <div class="manifest-card-outcome">Own the end-to-end student experience across onboarding and discovery</div>
                     <div class="manifest-card-divider">
-                      <div class="manifest-card-projects-label">Example projects</div>
+                      <div class="manifest-card-projects-label">Initiatives</div>
                       <div class="manifest-card-projects-list">
                         AI-Powered Student Dashboard<br/>
                         Personalised Onboarding Journeys<br/>
@@ -418,6 +429,20 @@
                       </div>
                     </div>
                   </div>
+                  <div class="manifest-card">
+                    <div class="manifest-card-name">Platform Infrastructure</div>
+                    <div class="manifest-card-role">Builder + DRI</div>
+                    <div class="manifest-card-outcome">Reliable substrate for AI-native delivery &mdash; agents cannot ship on infrastructure that flakes under load</div>
+                    <div class="manifest-card-divider">
+                      <div class="manifest-card-projects-label">Active</div>
+                      <div class="manifest-card-projects-list">
+                        AI infrastructure &middot; shared model layer<br/>
+                        Student Intelligence Graph<br/>
+                        University Data API migration<br/>
+                        Privacy &amp; consent flows &middot; performance
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
           </div>
@@ -432,11 +457,99 @@
             <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
-          <div class="inner" style="padding:2.2rem 2.8rem 1.4rem;justify-content:flex-start;align-items:stretch;">
+          <div class="inner" style="padding:1.2rem 1.5rem;">
             <div class="dots"></div>
-            <div style="display:flex;flex-direction:column;width:100%;flex:1;gap:0.9rem;">
-                <div class="squad-page-title">Business Unit Squads</div>
-                <div class="bu-grid" style="flex:1;align-content:start;">
+            <div class="play-zone stat-board" style="align-items:stretch;width:100%;max-width:none;padding:1.4rem 2rem;">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title">Business Unit <span style="color:var(--accent)">Squads</span></div>
+              </div>
+                <div class="bu-grid" style="align-content:start;">
+
+                  <!-- K12 Cialfo -->
+                  <div class="bu-col">
+                    <div class="bu-col-label">K12 Cialfo</div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Growth &amp; New Sales</div>
+                      <div class="bu-squad-metric">Network growth and ACV expansion</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Counselor Experience</div>
+                      <div class="bu-squad-metric">NPS and time savings</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Engagement &amp; Retention</div>
+                      <div class="bu-squad-metric">Logo retention and feature adoption</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Qualified DA Students</div>
+                      <div class="bu-squad-metric">Increase DA-qualified students</div>
+                    </div>
+                  </div>
+
+                  <!-- K12 BridgeU -->
+                  <div class="bu-col">
+                    <div class="bu-col-label">K12 BridgeU</div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Growth &amp; New Sales</div>
+                      <div class="bu-squad-metric">Network growth and ACV expansion</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Counselor Experience</div>
+                      <div class="bu-squad-metric">NPS and time savings</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Engagement &amp; Retention</div>
+                      <div class="bu-squad-metric">Logo retention and feature adoption</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Qualified DA Students</div>
+                      <div class="bu-squad-metric">Increase DA-qualified students</div>
+                    </div>
+                  </div>
+
+                  <!-- Explore -->
+                  <div class="bu-col">
+                    <div class="bu-col-label">Explore</div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Prove Value</div>
+                      <div class="bu-squad-metric">Make attribution evidence undeniable</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Student Influence</div>
+                      <div class="bu-squad-metric">Discovery to enrolment funnel</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Third-Party Integrations</div>
+                      <div class="bu-squad-metric">Unblock squads with connected data</div>
+                    </div>
+                  </div>
+
+                  <!-- Student Placements -->
+                  <div class="bu-col">
+                    <div class="bu-col-label">Student Placements</div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Lead Generation</div>
+                      <div class="bu-squad-metric">Increase qualified students</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Student Monetisation</div>
+                      <div class="bu-squad-metric">Conversion to commissionable enrolments</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">App Ops &amp; Processing</div>
+                      <div class="bu-squad-metric">Reduce application TAT</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">University &amp; Agent Partnerships</div>
+                      <div class="bu-squad-metric">Increase revenue from partners</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Comet</div>
+                      <div class="bu-squad-metric">Increase Comet revenue</div>
+                    </div>
+                  </div>
 
                   <!-- Kaaiser -->
                   <div class="bu-col">
@@ -460,69 +573,6 @@
                     <div class="bu-squad">
                       <div class="bu-squad-name">TAT Improvement</div>
                       <div class="bu-squad-metric">Reduce turnaround time</div>
-                    </div>
-                  </div>
-
-                  <!-- Student Placement -->
-                  <div class="bu-col">
-                    <div class="bu-col-label">Student Placement</div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Lead Generation</div>
-                      <div class="bu-squad-metric">Increase qualified students</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Student Monetisation</div>
-                      <div class="bu-squad-metric">Conversion to commissionable enrolments</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">App Ops &amp; Processing</div>
-                      <div class="bu-squad-metric">Reduce application TAT</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">University &amp; Agent Partnerships</div>
-                      <div class="bu-squad-metric">Increase revenue from partners</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Comet</div>
-                      <div class="bu-squad-metric">Increase Comet revenue</div>
-                    </div>
-                  </div>
-
-                  <!-- Explore -->
-                  <div class="bu-col">
-                    <div class="bu-col-label">Explore</div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Prove Value</div>
-                      <div class="bu-squad-metric">Make attribution evidence undeniable</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Student Influence</div>
-                      <div class="bu-squad-metric">Discovery to enrolment funnel</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Third-Party Integrations</div>
-                      <div class="bu-squad-metric">Unblock squads with connected data</div>
-                    </div>
-                  </div>
-
-                  <!-- K12 / Cialfo+ / BridgeU -->
-                  <div class="bu-col">
-                    <div class="bu-col-label">K12 / Cialfo+ / BridgeU</div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Growth</div>
-                      <div class="bu-squad-metric">Network growth and ACV expansion</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Counselor Experience</div>
-                      <div class="bu-squad-metric">NPS and time savings</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Engagement &amp; Retention</div>
-                      <div class="bu-squad-metric">Logo retention and feature adoption</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Qualified DA Students</div>
-                      <div class="bu-squad-metric">Increase DA-qualified students</div>
                     </div>
                   </div>
 
