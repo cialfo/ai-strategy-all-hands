@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ad-Free Cialfo — AI Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400;1,700&family=Literata:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/json" id="story-meta">
+      {
+        "id": "adfree",
+        "title": "Ad-Free Cialfo",
+        "author": "Rajat & Teresa",
+        "section": "AI Strategy",
+        "dateAdded": "2026-05-18",
+        "dateUpdated": "2026-05-18"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="bg"><div class="dots"></div></div>
+    <div id="progress"></div>
+
+    <div id="stage">
+
+      <!-- SLIDE 1: DIVIDER -->
+      <div class="slide active">
+        <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+          <div class="dots"></div>
+          <div class="divider-content">
+            <div class="divider-frame">
+              <div class="divider-title">The Platform We Always Should Have Had<br /><em>Ad-Free Cialfo</em></div>
+              <div class="rule"></div>
+            </div>
+            <div class="divider-line">
+              &#8220;Every distraction is one fewer reason a <em>counselor opens it.</em>&#8221;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: BEFORE / AFTER -->
+      <div class="slide">
+        <div class="w-full h-full flex flex-col">
+          <div class="hbar">
+            <span class="hbar-title">Ad-Free Cialfo</span>
+            <div class="mgb"><span class="ml1">Rajat &amp; Teresa</span><span class="ml2">AI Strategy</span></div>
+          </div>
+          <div class="inner">
+            <div class="dots"></div>
+            <div class="states">
+              <div class="state">
+                <div class="state-icon cold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,100,100,0.9)" stroke-width="1.5">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                    <path d="M7 8h2m4 0h4M7 11h6" stroke-dasharray="2 2"/>
+                  </svg>
+                </div>
+                <div class="state-word">With Ads</div>
+                <div class="state-desc">Ad inventory clutters UX<br />Mixed signals for students<br />Blurred commercial model<br />Counselors open it less</div>
+              </div>
+              <div class="arrow-wrap">
+                <div class="arrow-track relative">
+                  <div class="arrow-tail"></div>
+                  <div class="arrow-glow"></div>
+                  <div class="arrow-point"></div>
+                </div>
+                <div class="arrow-label">The Shift</div>
+              </div>
+              <div class="state">
+                <div class="state-icon warm">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(204,0,0,0.9)" stroke-width="1.5">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                    <circle cx="12" cy="10" r="3"/>
+                    <path d="M12 7v1M12 12v1M9 10H8M16 10h-1"/>
+                  </svg>
+                </div>
+                <div class="state-word warm">Ad-Free</div>
+                <div class="state-desc">Clean UX, sharp signal<br />Platform is a counseling graph<br />Clear commercial line<br />This is what it should have been</div>
+              </div>
+            </div>
+            <div class="h-divide"></div>
+            <div class="bottom">
+              <div class="bottom-text">
+                Owner &amp; timeline: <em>Rajat and Teresa</em> &#8212; TBD
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end #stage -->
+
+    <div id="slide-count"></div>
+    <div id="hint">&#8592; &#8594; arrow keys to navigate</div>
+    <script src="stories-index.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Strategy — Already in Flight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400;1,700&family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="bg">
+      <div class="dots"></div>
+    </div>
+    <div id="progress"></div>
+    <div id="stage">
+      <!-- SLIDE 0: TITLE -->
+      <div class="slide active">
+        <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+          <div class="dots"></div>
+          <div class="s1-content">
+            <div class="mg-frame" style="display:inline-flex;align-items:center;justify-content:center;padding:2rem;">
+              <img src="https://raw.githubusercontent.com/cialfo/manifest-product-all-hands/main/Assets/Manifest-Global--Horizontal-Logo-SVG.png"
+                   alt="Manifest Global"
+                   style="width:680px;height:auto;display:block;" />
+            </div>
+            <div class="s1-bottom">
+              <div class="s1-label">AI Strategy</div>
+              <div class="s1-divider"></div>
+              <div class="s1-date">Already in Flight</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 1: AGENDA -->
+      <div class="slide" id="agenda">
+        <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden" id="slide-agenda">
+          <div class="dots"></div>
+          <div class="ag-header">
+            <div class="ag-title">What We&#39;re <em>Building</em></div>
+            <div class="ag-rule"></div>
+          </div>
+          <div class="ag-grid-v2" id="ag-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="slide-count"></div>
+    <div id="hint">&#8592; &#8594; arrow keys to navigate</div>
+
+    <script src="stories-index.js"></script>
+    <script src="app.js"></script>
+    <script>
+      (function renderAgenda() {
+        const grid = document.getElementById("ag-grid");
+        if (!grid || !window.AH26) return;
+
+        const config = window.AH26.loadConfig();
+        const enabledIds = window.AH26.enabledInOrder(config);
+
+        const esc = (s) =>
+          String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+        let html = "";
+        enabledIds.forEach((id) => {
+          const story = window.AH26.findStory(id);
+          if (!story) return;
+          html += `<a class="ag-card-v2" href="${esc(story.file)}">
+            <div class="ag-card-title">${esc(story.title)}</div>
+            <div class="ag-card-author">${esc(story.author)}</div>
+          </a>`;
+        });
+
+        grid.innerHTML = html;
+      })();
+    </script>
+  </body>
+</html>
