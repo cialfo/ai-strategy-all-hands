@@ -11,6 +11,53 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* 2×2 world-class agenda */
+      .ag-grid-v2 { width: min(860px, 90%); gap: 1rem; }
+      .ag-link {
+        flex: 0 0 calc((100% - 1rem) / 2);
+        max-width: calc((100% - 1rem) / 2);
+      }
+      .ag-link .ag-card {
+        padding: 1.6rem 1.8rem !important;
+        min-height: 148px !important;
+        justify-content: flex-end !important;
+        align-items: flex-start !important;
+        gap: 5px !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+      /* large faint number watermark */
+      #slide-agenda .ag-num {
+        position: absolute !important;
+        top: 12px !important;
+        right: 14px !important;
+        font-family: "Roboto", sans-serif !important;
+        font-size: 33px !important;
+        font-weight: 700 !important;
+        color: var(--text-primary) !important;
+        opacity: 0.07 !important;
+        letter-spacing: 0 !important;
+        pointer-events: none !important;
+        line-height: 1 !important;
+      }
+      /* title: italic for editorial authority */
+      .ag-link .ag-name {
+        font-size: 28px !important;
+        line-height: 1.15 !important;
+      }
+      /* speaker: Montserrat uppercase in accent */
+      #slide-agenda .ag-speaker {
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 10px !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.2em !important;
+        text-transform: uppercase !important;
+        color: var(--accent) !important;
+        margin-top: 3px !important;
+      }
+    </style>
   </head>
   <body>
     <div id="bg">
@@ -41,8 +88,9 @@
       <div class="slide" id="agenda">
         <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden" id="slide-agenda">
           <div class="dots"></div>
+          <img src="Assets/Manifest-Global--Horizontal-Logo-SVG.png" alt="Manifest" style="position:absolute;top:28px;left:50%;transform:translateX(-50%);width:146px;height:auto;opacity:1;" />
           <div class="ag-header">
-            <div class="ag-title">The <em>AI-Native Shift</em></div>
+            <div class="ag-title">The AI-Native Shift</div>
             <div class="ag-rule"></div>
           </div>
           <div class="ag-grid-v2" id="ag-grid"></div>
