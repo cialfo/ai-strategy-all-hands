@@ -266,7 +266,7 @@
       const back = document.createElement("a");
       back.href = backHref;
       back.style.cssText = btnBase + ";left:20px";
-      back.innerHTML = "&larr;&nbsp;&nbsp;What We&rsquo;re Building";
+      back.innerHTML = "&larr;&nbsp;&nbsp;How Manifest Runs";
       back.addEventListener("mouseenter", () => {
         back.style.borderColor = "rgba(var(--accent-rgb),.6)";
         back.style.color = "var(--text-primary)";
