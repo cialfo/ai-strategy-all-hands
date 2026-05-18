@@ -15,38 +15,36 @@
       .stat-after, .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
 
       /* Slide 4 shift tables */
-      .shift-table {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0.7rem;
-        width: 100%;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid var(--neutral-panel-hi);
+      .shift-col-head {
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        border-bottom: 1.5px solid;
+        margin-bottom: 4px;
+        margin-top: 0.55rem;
       }
+      .shift-col-head.old { color: #888; border-color: #ccc; }
+      .shift-col-head.warm { color: var(--accent); border-color: var(--accent); }
+      .shift-table { display: flex; flex-direction: column; width: 100%; }
       .shift-row {
         display: flex;
         align-items: center;
-        gap: 0.6rem;
-        padding: 0.3rem 0.65rem;
-        background: var(--neutral-panel);
-        border-bottom: 1px solid var(--neutral-panel-hi);
+        gap: 8px;
+        padding: 6px 0;
+        border-bottom: 0.5px solid rgba(0,0,0,0.07);
       }
       .shift-row:last-child { border-bottom: none; }
-      .shift-row.warm-row {
-        background: rgba(var(--accent-rgb), 0.04);
-        border-color: rgba(var(--accent-rgb), 0.13);
-      }
       .shift-num {
         font-family: "Montserrat", sans-serif;
         font-size: 9px;
-        font-weight: 700;
-        color: var(--text-secondary);
-        opacity: 0.4;
-        min-width: 14px;
-        text-align: right;
+        font-weight: 600;
+        min-width: 16px;
       }
-      .shift-num.warm { color: var(--accent); opacity: 0.55; }
+      .shift-num.old { color: #bbb; }
+      .shift-num.warm { color: rgba(var(--accent-rgb), 0.35); }
       .shift-text {
         font-family: "Cormorant Garamond", serif;
         font-size: 15px;
@@ -59,20 +57,14 @@
         font-family: "Montserrat", sans-serif;
         font-size: 8px;
         font-weight: 700;
-        letter-spacing: 0.07em;
         text-transform: uppercase;
-        padding: 0.13rem 0.42rem;
+        letter-spacing: 0.05em;
+        padding: 2px 6px;
         border-radius: 4px;
         white-space: nowrap;
-        background: rgba(0,0,0,0.06);
-        color: var(--text-secondary);
-        border: 1px solid rgba(0,0,0,0.1);
       }
-      .role-tag.warm {
-        background: rgba(var(--accent-rgb), 0.09);
-        color: var(--accent);
-        border-color: rgba(var(--accent-rgb), 0.25);
-      }
+      .role-tag.old { background: #f3ead0; color: #7a5c00; }
+      .role-tag.warm { background: rgba(var(--accent-rgb), 0.08); color: var(--accent); }
 
       /* Slides 5A & 5B squad map */
       .squad-page {
@@ -95,85 +87,103 @@
 
       /* 5A — Manifest level */
       .manifest-level-row {
-        display: flex;
-        gap: 1.8rem;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        max-width: 620px;
       }
       .manifest-card {
-        background: rgba(var(--accent-rgb), 0.06);
-        border: 1px solid rgba(var(--accent-rgb), 0.28);
+        background: #fff;
+        border: 0.5px solid rgba(var(--accent-rgb), 0.25);
         border-radius: 10px;
-        padding: 0.75rem 1.4rem;
-        min-width: 210px;
+        padding: 1.2rem 1.4rem;
         display: flex;
         flex-direction: column;
-        gap: 0.2rem;
       }
       .manifest-card-name {
-        font-family: "Montserrat", sans-serif;
-        font-size: 13px;
-        font-weight: 600;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        font-weight: 700;
         color: var(--text-primary);
+        margin-bottom: 4px;
       }
       .manifest-card-role {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 12px;
-        font-style: italic;
-        color: var(--text-secondary);
-      }
-      .manifest-card-owner {
         font-family: "Montserrat", sans-serif;
         font-size: 10px;
         font-weight: 600;
-        letter-spacing: 0.06em;
         color: var(--accent);
-        margin-top: 0.15rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+      .manifest-card-outcome {
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+      .manifest-card-divider {
+        border-top: 0.5px solid #e8e0cc;
+        padding-top: 8px;
+      }
+      .manifest-card-projects-label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 5px;
+      }
+      .manifest-card-projects-list {
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        color: #555;
+        line-height: 1.8;
       }
 
       /* 5B — BU grid */
       .bu-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
         width: 100%;
-        max-width: 900px;
+        max-width: 960px;
       }
-      .bu-col { display: flex; flex-direction: column; gap: 0.4rem; }
+      .bu-col { display: flex; flex-direction: column; }
       .bu-col-label {
         font-family: "Montserrat", sans-serif;
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--accent);
-        opacity: 0.85;
-        padding-bottom: 0.25rem;
-        border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
-        margin-bottom: 0.1rem;
+        margin-bottom: 8px;
+        text-align: center;
       }
       .bu-squad {
-        background: var(--neutral-panel);
-        border: 1px solid var(--neutral-panel-hi);
+        background: #fff;
+        border: 0.5px solid rgba(0,0,0,0.1);
         border-radius: 7px;
-        padding: 0.38rem 0.6rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.08rem;
+        padding: 7px 10px;
+        margin-bottom: 7px;
       }
+      .bu-squad:last-child { margin-bottom: 0; }
       .bu-squad-name {
-        font-family: "Montserrat", sans-serif;
-        font-size: 11px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
         font-weight: 600;
         color: var(--text-primary);
-        line-height: 1.25;
+        line-height: 1.2;
       }
       .bu-squad-metric {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 11px;
-        font-style: italic;
-        color: var(--text-secondary);
-        line-height: 1.3;
+        font-family: "Montserrat", sans-serif;
+        font-size: 9px;
+        color: #888;
+        margin-top: 2px;
+        line-height: 1.4;
       }
     </style>
     <script type="application/json" id="story-meta">
@@ -235,16 +245,16 @@
                   <div class="dot void"></div>
                   <div class="slabel after">Bandwidth maxed<br />Projects gated</div>
                 </div>
-                <div class="connector void"></div>
+                <div class="connector alive"></div>
                 <div class="stage">
                   <div class="dot void"></div>
                   <div class="slabel after">Features ship<br />Metrics don&#8217;t</div>
                 </div>
               </div>
               <div class="words">
-                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:70px;font-weight:500;">Coordinated</div>
-                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:56px;font-weight:500;">Fragmented</div>
-                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:43px;font-weight:500;color:var(--accent);font-style:italic;">Lagging</div>
+                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:70px;font-weight:400;">Coordinated</div>
+                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:56px;font-weight:400;">Fragmented</div>
+                <div class="word" style="font-family:'Literata',Georgia,serif;font-size:43px;font-weight:400;color:var(--accent);font-style:italic;">Lagging</div>
               </div>
             </div>
           </div>
@@ -314,15 +324,16 @@
                   </svg>
                 </div>
                 <div class="state-word">Old Way</div>
+                <div class="shift-col-head old">Process</div>
                 <div class="shift-table">
-                  <div class="shift-row"><span class="shift-num">01</span><span class="shift-text">Business sets the requirement</span><span class="role-tag">Business</span></div>
-                  <div class="shift-row"><span class="shift-num">02</span><span class="shift-text">PM writes the PRD</span><span class="role-tag">PM</span></div>
-                  <div class="shift-row"><span class="shift-num">03</span><span class="shift-text">Design creates mockups</span><span class="role-tag">Design</span></div>
-                  <div class="shift-row"><span class="shift-num">04</span><span class="shift-text">PM&ndash;Eng sync</span><span class="role-tag">PM + Eng</span></div>
-                  <div class="shift-row"><span class="shift-num">05</span><span class="shift-text">Handover &amp; tickets</span><span class="role-tag">PM</span></div>
-                  <div class="shift-row"><span class="shift-num">06</span><span class="shift-text">Development</span><span class="role-tag">Engineering</span></div>
-                  <div class="shift-row"><span class="shift-num">07</span><span class="shift-text">QE testing</span><span class="role-tag">QE</span></div>
-                  <div class="shift-row"><span class="shift-num">08</span><span class="shift-text">Deploy</span><span class="role-tag">Eng</span></div>
+                  <div class="shift-row"><span class="shift-num old">01</span><span class="shift-text">Business sets the requirement</span><span class="role-tag old">Business</span></div>
+                  <div class="shift-row"><span class="shift-num old">02</span><span class="shift-text">PM writes the PRD</span><span class="role-tag old">PM</span></div>
+                  <div class="shift-row"><span class="shift-num old">03</span><span class="shift-text">Design creates prototypes</span><span class="role-tag old">Design</span></div>
+                  <div class="shift-row"><span class="shift-num old">04</span><span class="shift-text">PM&ndash;Eng sync</span><span class="role-tag old">PM + Eng</span></div>
+                  <div class="shift-row"><span class="shift-num old">05</span><span class="shift-text">Handover &amp; tickets</span><span class="role-tag old">PM</span></div>
+                  <div class="shift-row"><span class="shift-num old">06</span><span class="shift-text">Development</span><span class="role-tag old">Engineering</span></div>
+                  <div class="shift-row"><span class="shift-num old">07</span><span class="shift-text">QE testing</span><span class="role-tag old">QE</span></div>
+                  <div class="shift-row"><span class="shift-num old">08</span><span class="shift-text">Deploy</span><span class="role-tag old">Eng</span></div>
                 </div>
               </div>
               <div class="arrow-wrap" style="padding-top:3.8rem;flex-shrink:0;">
@@ -340,13 +351,14 @@
                   </svg>
                 </div>
                 <div class="state-word warm">New Way</div>
+                <div class="shift-col-head warm">Process</div>
                 <div class="shift-table">
-                  <div class="shift-row warm-row"><span class="shift-num warm">01</span><span class="shift-text">Founder sets the outcome target</span><span class="role-tag warm">Founder</span></div>
-                  <div class="shift-row warm-row"><span class="shift-num warm">02</span><span class="shift-text">DRI diagnoses the gap</span><span class="role-tag warm">DRI</span></div>
-                  <div class="shift-row warm-row"><span class="shift-num warm">03</span><span class="shift-text">Cycle kickoff</span><span class="role-tag warm">DRI + Builder</span></div>
-                  <div class="shift-row warm-row"><span class="shift-num warm">04</span><span class="shift-text">Builder ships</span><span class="role-tag warm">Builder</span></div>
-                  <div class="shift-row warm-row"><span class="shift-num warm">05</span><span class="shift-text">Metric measured</span><span class="role-tag warm">DRI</span></div>
-                  <div class="shift-row warm-row"><span class="shift-num warm">06</span><span class="shift-text">Next bet or pivot</span><span class="role-tag warm">Founder + DRI</span></div>
+                  <div class="shift-row"><span class="shift-num warm">01</span><span class="shift-text">Founder sets the outcome target</span><span class="role-tag warm">Founder</span></div>
+                  <div class="shift-row"><span class="shift-num warm">02</span><span class="shift-text">DRI diagnoses the gap</span><span class="role-tag warm">DRI</span></div>
+                  <div class="shift-row"><span class="shift-num warm">03</span><span class="shift-text">Cycle kickoff</span><span class="role-tag warm">DRI + Builder</span></div>
+                  <div class="shift-row"><span class="shift-num warm">04</span><span class="shift-text">Builder ships</span><span class="role-tag warm">Builder</span></div>
+                  <div class="shift-row"><span class="shift-num warm">05</span><span class="shift-text">Metric measured</span><span class="role-tag warm">DRI</span></div>
+                  <div class="shift-row"><span class="shift-num warm">06</span><span class="shift-text">Next bet or pivot</span><span class="role-tag warm">Founder + DRI</span></div>
                 </div>
               </div>
             </div>
@@ -368,17 +380,29 @@
                 <div class="manifest-level-row">
                   <div class="manifest-card">
                     <div class="manifest-card-name">Student Experience</div>
-                    <div class="manifest-card-role">End-to-end student journey across all BUs</div>
-                    <div class="manifest-card-owner">Builder + DRI</div>
+                    <div class="manifest-card-role">Builder + DRI</div>
+                    <div class="manifest-card-outcome">Own the end-to-end student experience across onboarding and discovery</div>
+                    <div class="manifest-card-divider">
+                      <div class="manifest-card-projects-label">Example projects</div>
+                      <div class="manifest-card-projects-list">
+                        AI-Powered Student Dashboard<br/>
+                        Personalised Onboarding Journeys<br/>
+                        Saige &middot; Scholarships &middot; Engagement Nudges
+                      </div>
+                    </div>
                   </div>
                   <div class="manifest-card">
                     <div class="manifest-card-name">Careers to Outcomes</div>
-                    <div class="manifest-card-role">Student destination data — cross-BU signal</div>
-                    <div class="manifest-card-owner">Founder</div>
+                    <div class="manifest-card-role">Founder &mdash; Horizon 2</div>
+                    <div class="manifest-card-outcome">Move towards Horizon 2 &mdash; careers-to-outcomes discovery</div>
+                    <div class="manifest-card-divider">
+                      <div class="manifest-card-projects-label">In discovery</div>
+                      <div class="manifest-card-projects-list">
+                        Data vendor decision &mdash; Lightcast vs TalentNeuron<br/>
+                        Prototype &middot; define business model
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div style="font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--text-secondary);margin-top:0.8rem;text-align:center;max-width:520px;line-height:1.55;">
-                  These squads own outcomes that cut across every business unit — they sit above the BU layer by design.
                 </div>
             </div>
           </div>
