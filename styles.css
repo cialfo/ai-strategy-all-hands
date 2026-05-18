@@ -522,6 +522,9 @@ body {
   color: var(--accent);
   font-style: normal;
 }
+.divider-title span {
+  font-size: 0.78em;
+}
 .divider-line {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 30px;
