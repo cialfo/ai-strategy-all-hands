@@ -2,7 +2,7 @@ window.STORIES = [
   {
     id: "squads",
     file: "story-01-squads.html",
-    title: "Squad Structure",
+    title: "How We Work Now",
     author: "Hitendra",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
@@ -11,7 +11,7 @@ window.STORIES = [
   {
     id: "techdebt",
     file: "story-02-techdebt.html",
-    title: "Platform Reliability",
+    title: "Building on Solid Ground",
     author: "Vishal & Haseeb",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
@@ -29,7 +29,7 @@ window.STORIES = [
   {
     id: "admin",
     file: "story-04-admin.html",
-    title: "Admin Panel Intelligence",
+    title: "Ops That Think",
     author: "William & Hitendra",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
@@ -38,7 +38,7 @@ window.STORIES = [
   {
     id: "airtable",
     file: "story-05-airtable.html",
-    title: "Airtable as Velocity Layer",
+    title: "Two Speeds, One System",
     author: "Charles",
     section: "AI Strategy",
     dateAdded: "2026-05-18",

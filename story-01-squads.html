@@ -14,49 +14,51 @@
     <style>
       .stat-after, .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
 
-      /* Squad Map */
-      .squad-map { display: flex; flex-direction: column; align-items: center; gap: 1.6rem; padding: 1rem 2rem; width: 100%; }
+      .squad-map { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; padding: 0.5rem 2rem; width: 100%; }
       .squad-map-top { display: flex; gap: 2rem; justify-content: center; }
-      .squad-map-bus { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+      .squad-divider-line { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--neutral-panel-hi), transparent); }
+      .squad-bu-section { display: flex; gap: 1.8rem; justify-content: center; flex-wrap: wrap; }
+      .squad-bu-group { display: flex; flex-direction: column; align-items: center; gap: 0.45rem; }
+      .squad-bu-label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--accent); opacity: 0.85;
+      }
+      .squad-bu-nodes { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; max-width: 280px; }
       .squad-node {
         background: var(--neutral-panel);
         border: 1px solid var(--neutral-panel-hi);
         border-radius: 8px;
-        padding: 0.55rem 1.1rem;
-        display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+        padding: 0.4rem 0.75rem;
+        display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem;
+        min-width: 120px;
       }
       .squad-node.manifest-level {
-        background: rgba(var(--accent-rgb), 0.08);
-        border-color: rgba(var(--accent-rgb), 0.35);
+        background: rgba(var(--accent-rgb), 0.06);
+        border-color: rgba(var(--accent-rgb), 0.3);
         min-width: 160px;
       }
       .squad-node-name {
         font-family: "Montserrat", sans-serif;
-        font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+        font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
         color: var(--text-primary);
       }
       .squad-node-role {
         font-family: "Cormorant Garamond", serif;
         font-size: 11px; font-style: italic;
         color: var(--text-secondary);
+        line-height: 1.3;
       }
-      .squad-bu-group { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
-      .squad-bu-label {
+      .squad-section-label {
         font-family: "Montserrat", sans-serif;
         font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-        color: var(--accent); opacity: 0.85;
-      }
-      .squad-bu-nodes { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; }
-      .squad-bu-nodes .squad-node { min-width: 90px; padding: 0.4rem 0.7rem; }
-      .squad-divider-line {
-        width: 100%; height: 1px;
-        background: linear-gradient(90deg, transparent, var(--neutral-panel-hi), transparent);
+        color: var(--accent); opacity: 0.85; margin-bottom: 0.15rem;
       }
     </style>
     <script type="application/json" id="story-meta">
       {
         "id": "squads",
-        "title": "Squad Structure",
+        "title": "How We Work Now",
         "author": "Hitendra",
         "section": "AI Strategy",
         "dateAdded": "2026-05-18",
@@ -76,21 +78,21 @@
           <div class="dots"></div>
           <div class="divider-content">
             <div class="divider-frame">
-              <div class="divider-title">From Functions to Outcomes<br /><em>Squad Structure</em></div>
+              <div class="divider-title"><em>From Functions to Outcomes</em><br />The New Operating Model</div>
               <div class="rule"></div>
             </div>
             <div class="divider-line">
-              &#8220;The <em>role</em> is defined by the outcome you&#8217;re serving &#8212; not the function you came from.&#8221;
+              &#8220;The outcome defines the role. <em>Not the title.</em>&#8221;
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 2: JOURNEY — Why We're Changing -->
+      <!-- SLIDE 2: JOURNEY -->
       <div class="slide">
         <div class="w-full h-full flex flex-col">
           <div class="hbar">
-            <span class="hbar-title">Squad Structure</span>
+            <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
           <div class="inner">
@@ -99,28 +101,28 @@
               <div class="journey">
                 <div class="stage">
                   <div class="dot alive"></div>
-                  <div class="slabel alive">Function-based teams</div>
+                  <div class="slabel alive">Function-based teams<br />Lanes locked for the quarter</div>
                 </div>
                 <div class="connector alive"></div>
                 <div class="stage">
                   <div class="dot alive"></div>
-                  <div class="slabel alive">Sprint ceremonies consume the week</div>
+                  <div class="slabel alive">Sprint ceremonies every two weeks<br />Energy into managing, not building</div>
                 </div>
                 <div class="connector alive"></div>
                 <div class="stage">
                   <div class="dot void"></div>
-                  <div class="slabel after">Energy into managing work, not doing it</div>
+                  <div class="slabel after">AI makes one builder<br />worth three to five</div>
                 </div>
                 <div class="connector void"></div>
                 <div class="stage">
                   <div class="dot void"></div>
-                  <div class="slabel after">AI changes the equation: 1 builder = 3–5&times; output</div>
+                  <div class="slabel after">Smaller squads, shorter cycles<br />direct ownership — now viable</div>
                 </div>
               </div>
               <div class="words">
-                <div class="word">Slow</div>
-                <div class="word">Siloed</div>
-                <div class="word">Overhead</div>
+                <div class="word">Coordinated</div>
+                <div class="word">Fragmented</div>
+                <div class="word">Lagging</div>
               </div>
             </div>
           </div>
@@ -131,7 +133,7 @@
       <div class="slide">
         <div class="w-full h-full flex flex-col">
           <div class="hbar">
-            <span class="hbar-title">Squad Structure</span>
+            <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
           <div class="inner">
@@ -141,7 +143,7 @@
               <div class="corner bl"></div><div class="corner br"></div>
               <div class="stat-board-header">
                 <div class="stat-board-title">Three Roles, <em>One Squad</em></div>
-                <div class="stat-board-sub">Determined by the outcome — not the title</div>
+                <div class="stat-board-sub">Role follows the outcome. Not the org chart.</div>
               </div>
               <div class="stat-grid" style="grid-template-columns: repeat(3,1fr);">
                 <div class="stat-card">
@@ -174,11 +176,11 @@
         </div>
       </div>
 
-      <!-- SLIDE 4: BEFORE / AFTER -->
+      <!-- SLIDE 4: OLD WAY / NEW WAY -->
       <div class="slide">
         <div class="w-full h-full flex flex-col">
           <div class="hbar">
-            <span class="hbar-title">Squad Structure</span>
+            <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
           <div class="inner">
@@ -186,13 +188,13 @@
             <div class="states">
               <div class="state">
                 <div class="state-icon cold">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,100,100,0.8)" stroke-width="1.5">
                     <rect x="3" y="3" width="18" height="18" rx="2"/>
                     <path d="M3 9h18M9 21V9"/>
                   </svg>
                 </div>
                 <div class="state-word">Old Way</div>
-                <div class="state-desc">PM writes PRD<br />2-week sprint ceremony<br />Story points &amp; velocity<br />Days to first code</div>
+                <div class="state-desc">PM writes PRD<br />2-week sprints &middot; story points<br />Days to first line of code</div>
               </div>
               <div class="arrow-wrap">
                 <div class="arrow-track relative">
@@ -209,13 +211,7 @@
                   </svg>
                 </div>
                 <div class="state-word warm">New Way</div>
-                <div class="state-desc">Founder sets outcome target<br />5–10 day cycle · 30-min kickoff<br />Did the metric move?<br />Hours to first code</div>
-              </div>
-            </div>
-            <div class="h-divide"></div>
-            <div class="bottom">
-              <div class="bottom-text">
-                &#8220;Success is not &#8216;all tickets closed.&#8217;<br />Success is <em>the metric improved.</em>&#8221;
+                <div class="state-desc">Founder sets the outcome target<br />5&ndash;10 day cycles &middot; did the metric move?<br />Hours to first line of code</div>
               </div>
             </div>
           </div>
@@ -226,15 +222,16 @@
       <div class="slide">
         <div class="w-full h-full flex flex-col">
           <div class="hbar">
-            <span class="hbar-title">Squad Structure</span>
+            <span class="hbar-title">How We Work Now</span>
             <div class="mgb"><span class="ml1">Hitendra</span><span class="ml2">AI Strategy</span></div>
           </div>
           <div class="inner">
             <div class="dots"></div>
-            <div class="play-zone" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:0;">
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:0.5rem 1.5rem;">
               <div class="squad-map">
+
                 <!-- Manifest-level -->
-                <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);opacity:0.85;margin-bottom:0.2rem;">Manifest-Level</div>
+                <div class="squad-section-label">Manifest-Level</div>
                 <div class="squad-map-top">
                   <div class="squad-node manifest-level">
                     <div class="squad-node-name">Student Experience</div>
@@ -249,45 +246,101 @@
                 <div class="squad-divider-line"></div>
 
                 <!-- BU squads -->
-                <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);opacity:0.85;margin-bottom:0.2rem;">BU Squads</div>
-                <div class="squad-map-bus">
+                <div class="squad-section-label">BU Squads</div>
+                <div class="squad-bu-section">
+
                   <div class="squad-bu-group">
                     <div class="squad-bu-label">Kaaiser</div>
                     <div class="squad-bu-nodes">
-                      <div class="squad-node"><div class="squad-node-name">Squad 1</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 2</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 3</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 4</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 5</div></div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Agent Experience</div>
+                        <div class="squad-node-role">Win more agents, more apps per agent</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Internal Ops</div>
+                        <div class="squad-node-role">AI-native BE ops &amp; marketing automation</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">University Partnerships</div>
+                        <div class="squad-node-role">Better terms, faster payouts</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">ML &amp; Data</div>
+                        <div class="squad-node-role">Novel ML solutions, cross-squad data layer</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">TAT Improvement</div>
+                        <div class="squad-node-role">Reduce turnaround time</div>
+                      </div>
                     </div>
                   </div>
+
                   <div class="squad-bu-group">
                     <div class="squad-bu-label">Student Placement</div>
                     <div class="squad-bu-nodes">
-                      <div class="squad-node"><div class="squad-node-name">Squad 1</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 2</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 3</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 4</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 5</div></div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Lead Generation</div>
+                        <div class="squad-node-role">Increase qualified students</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Student Monetisation</div>
+                        <div class="squad-node-role">Conversion to commissionable enrolments</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">App Ops &amp; Processing</div>
+                        <div class="squad-node-role">Reduce application TAT</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">University &amp; Agent Partnerships</div>
+                        <div class="squad-node-role">Increase revenue from partners</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Comet</div>
+                        <div class="squad-node-role">Increase Comet revenue</div>
+                      </div>
                     </div>
                   </div>
+
                   <div class="squad-bu-group">
                     <div class="squad-bu-label">Explore</div>
                     <div class="squad-bu-nodes">
-                      <div class="squad-node"><div class="squad-node-name">Squad 1</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 2</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 3</div></div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Prove Value</div>
+                        <div class="squad-node-role">Make attribution evidence undeniable</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Student Influence</div>
+                        <div class="squad-node-role">Discovery to enrolment funnel</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Third-Party Integrations</div>
+                        <div class="squad-node-role">Unblock squads with connected data</div>
+                      </div>
                     </div>
                   </div>
+
                   <div class="squad-bu-group">
                     <div class="squad-bu-label">K12 / Cialfo+ / BridgeU</div>
                     <div class="squad-bu-nodes">
-                      <div class="squad-node"><div class="squad-node-name">Squad 1</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 2</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 3</div></div>
-                      <div class="squad-node"><div class="squad-node-name">Squad 4</div></div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Growth</div>
+                        <div class="squad-node-role">Network growth and ACV expansion</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Counselor Experience</div>
+                        <div class="squad-node-role">NPS and time savings</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Engagement &amp; Retention</div>
+                        <div class="squad-node-role">Logo retention and feature adoption</div>
+                      </div>
+                      <div class="squad-node">
+                        <div class="squad-node-name">Qualified DA Students</div>
+                        <div class="squad-node-role">Increase DA-qualified students</div>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>

@@ -284,7 +284,7 @@
       next.href = nextHref;
       next.style.cssText = btnBase + ";right:20px";
       const label =
-        /index\.html$/.test(nextHref) && !/#/.test(nextHref) ? "Back to Start" : "Next Story";
+        /index\.html$/.test(nextHref) && !/#/.test(nextHref) ? "Back to Start" : "Next Chapter";
       next.innerHTML = label + "&nbsp;&nbsp;&rarr;";
       next.addEventListener("mouseenter", () => {
         next.style.borderColor = "rgba(var(--accent-rgb),.6)";
