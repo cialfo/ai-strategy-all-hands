@@ -12,22 +12,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* 3+2 agenda grid for 5 stories */
+      /* 2x2 agenda grid */
       .ag-grid-v2 {
         display: grid !important;
-        grid-template-columns: repeat(6, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.75rem !important;
-        width: min(924px, 92%) !important;
+        width: min(820px, 92%) !important;
       }
-      /* all tiles span 2 columns — 3 per row */
       .ag-link {
-        grid-column: span 2 !important;
+        grid-column: span 1 !important;
         flex: none !important;
         max-width: none !important;
       }
-      /* 4th and 5th tiles: centred in row 2 */
-      .ag-link:nth-child(4) { grid-column: 2 / span 2 !important; }
-      .ag-link:nth-child(5) { grid-column: 4 / span 2 !important; }
+      .ag-link:nth-child(4) { grid-column: span 1 !important; }
+      .ag-link:nth-child(5) { grid-column: span 1 !important; }
 
       .ag-link .ag-card {
         padding: 1.22rem 1.44rem !important;
