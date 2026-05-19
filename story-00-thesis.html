@@ -17,25 +17,21 @@
       .role-tag.old { background:var(--neutral-panel); color:var(--text-secondary); }
       .role-tag.warm { background:rgba(var(--accent-rgb),0.08); color:var(--accent); }
 
-      /* Slide 4 — horizontal manifesto rows */
+      /* Slide 4 — community outcome cards */
       .outcome-grid {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
         width: 100%;
       }
       .outcome-card {
+        background: rgba(var(--accent-rgb), 0.03);
+        border: 1px solid rgba(var(--accent-rgb), 0.25);
+        border-radius: 12px;
+        padding: 1.4rem 1.3rem;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 2.5rem;
-        padding: 1.1rem 0.5rem;
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
-        border-radius: 0;
-      }
-      .outcome-card:last-child {
-        border-bottom: none;
+        flex-direction: column;
+        gap: 8px;
       }
       .outcome-who {
         font-family: "Montserrat", sans-serif;
@@ -44,25 +40,21 @@
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--accent);
-        width: 90px;
-        flex-shrink: 0;
       }
       .outcome-headline {
         font-family: "Cormorant Garamond", serif;
-        font-size: 26px;
+        font-size: 23px;
         font-weight: 700;
         font-style: italic;
         color: var(--text-primary);
         line-height: 1.18;
-        width: 42%;
-        flex-shrink: 0;
       }
       .outcome-body {
         font-family: "Literata", Georgia, serif;
         font-size: 13px;
         color: var(--text-secondary);
         line-height: 1.55;
-        flex: 1;
+        margin-top: 2px;
       }
 
       /* Graph footer line */
