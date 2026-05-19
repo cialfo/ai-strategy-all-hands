@@ -12,32 +12,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
-
-      /* Slide 4: invert card hierarchy — subject is the hero, status is a quiet tag */
-      .stat-card-label {
-        font-family: "Cormorant Garamond", serif !important;
-        font-size: 22px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0 !important;
-        text-transform: none !important;
-        color: var(--accent) !important;
-        line-height: 1.2 !important;
-      }
-      .stat-status-tag {
-        display: inline-block;
-        font-family: "Montserrat", sans-serif;
-        font-size: 8px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--text-secondary);
-        background: var(--neutral-panel);
-        border: 1px solid var(--neutral-panel-hi);
-        padding: 3px 8px;
-        border-radius: 4px;
-        white-space: nowrap;
-      }
+      .stat-after, .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
+      .role-tag { font-family:"Montserrat",sans-serif; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:2px 6px; border-radius:4px; white-space:nowrap; }
+      .role-tag.old { background:var(--neutral-panel); color:var(--text-secondary); }
 
       .shift-col-head { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding-bottom:5px; border-bottom:1.5px solid; margin-bottom:4px; margin-top:0.55rem; }
       .shift-col-head.old { color:var(--text-secondary); border-color:var(--neutral-panel-hi); }
@@ -219,25 +196,28 @@
               </div>
               <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);">
                 <div class="stat-card">
-                  <div class="stat-card-label">Ops Panel</div>
-                  <div class="stat-card-row stat-card-row-text">
-                    <span class="stat-status-tag">In Build</span>
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Ops Panel</span>
+                    <span class="role-tag old">In Build</span>
                   </div>
-                  <div class="stat-card-foot">In-house platform replacing legacy CRM workflows</div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Replaces the legacy CRM</div>
+                  <div class="stat-card-foot">In-house platform built for how the ops team actually works</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-card-label">AI Signal Layer</div>
-                  <div class="stat-card-row stat-card-row-text">
-                    <span class="stat-status-tag">In Build</span>
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">AI Signal Layer</span>
+                    <span class="role-tag old">In Build</span>
                   </div>
-                  <div class="stat-card-foot">Escalations, blockers, and opportunities surfaced in real time</div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Surfaces what matters</div>
+                  <div class="stat-card-foot">Escalations, blockers, and opportunities in real time</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-card-label">UG Student Placements</div>
-                  <div class="stat-card-row stat-card-row-text">
-                    <span class="stat-status-tag">First Deploy</span>
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">UG Student Placements</span>
+                    <span class="role-tag old">First Deploy</span>
                   </div>
-                  <div class="stat-card-foot">First deployment for the undergraduate Student Placements cycle</div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">First live cycle</div>
+                  <div class="stat-card-foot">First deployment for the undergraduate Student Placements 2027–28 cycle</div>
                 </div>
               </div>
             </div>
