@@ -120,6 +120,15 @@
     <script src="stories-index.js"></script>
     <script src="app.js"></script>
     <script>
+      // If the URL contains #agenda, jump to the agenda slide (index 1) on load
+      (function handleHash() {
+        if (location.hash === "#agenda") {
+          window.goTo && window.goTo(1);
+          history.replaceState(null, "", location.pathname);
+        }
+      })();
+    </script>
+    <script>
       (function renderAgenda() {
         const grid = document.getElementById("ag-grid");
         if (!grid || !window.AH26) return;
