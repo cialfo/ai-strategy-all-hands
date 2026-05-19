@@ -38,7 +38,7 @@ window.STORIES = [
   {
     id: "admin",
     file: "story-04-admin.html",
-    title: "The Intelligence Layer",
+    title: "Manifest Intelligence",
     author: "William Hund",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
