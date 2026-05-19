@@ -12,28 +12,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* 2×2 world-class agenda */
-      .ag-grid-v2 { width: min(860px, 90%); gap: 1rem; }
-      .ag-link {
-        flex: 0 0 calc((100% - 1rem) / 2);
-        max-width: calc((100% - 1rem) / 2);
+      /* 3+2 agenda grid for 5 stories */
+      .ag-grid-v2 {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 0.75rem !important;
+        width: min(880px, 92%) !important;
       }
+      /* all tiles span 2 columns — 3 per row */
+      .ag-link {
+        grid-column: span 2 !important;
+        flex: none !important;
+        max-width: none !important;
+      }
+      /* 4th and 5th tiles: centred in row 2 */
+      .ag-link:nth-child(4) { grid-column: 2 / span 2 !important; }
+      .ag-link:nth-child(5) { grid-column: 4 / span 2 !important; }
+
       .ag-link .ag-card {
-        padding: 1.6rem 1.8rem !important;
-        min-height: 148px !important;
+        padding: 1.1rem 1.3rem !important;
+        min-height: 108px !important;
         justify-content: flex-end !important;
         align-items: flex-start !important;
-        gap: 5px !important;
+        gap: 4px !important;
         position: relative !important;
         overflow: hidden !important;
       }
-      /* large faint number watermark */
+      /* watermark number */
       #slide-agenda .ag-num {
         position: absolute !important;
-        top: 12px !important;
-        right: 14px !important;
+        top: 10px !important;
+        right: 12px !important;
         font-family: "Roboto", sans-serif !important;
-        font-size: 33px !important;
+        font-size: 26px !important;
         font-weight: 700 !important;
         color: var(--text-primary) !important;
         opacity: 0.07 !important;
@@ -41,21 +52,25 @@
         pointer-events: none !important;
         line-height: 1 !important;
       }
-      /* title: italic for editorial authority */
+      /* tile title */
       .ag-link .ag-name {
-        font-size: 28px !important;
+        font-size: 21px !important;
         line-height: 1.15 !important;
       }
-      /* speaker: Montserrat uppercase in accent */
+      /* speaker tag */
       #slide-agenda .ag-speaker {
         font-family: "Montserrat", sans-serif !important;
-        font-size: 10px !important;
+        font-size: 9px !important;
         font-style: normal !important;
         font-weight: 700 !important;
-        letter-spacing: 0.2em !important;
+        letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
         color: var(--accent) !important;
-        margin-top: 3px !important;
+        margin-top: 2px !important;
+      }
+      /* tighten header so logo doesn't crowd */
+      #slide-agenda .ag-header {
+        margin-bottom: 0.9rem !important;
       }
     </style>
   </head>
