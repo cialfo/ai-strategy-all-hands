@@ -1,5 +1,14 @@
 window.STORIES = [
   {
+    id: "thesis",
+    file: "story-00-thesis.html",
+    title: "The AI-Native Thesis",
+    author: "TBD",
+    section: "AI Strategy",
+    dateAdded: "2026-05-19",
+    dateUpdated: "2026-05-19",
+  },
+  {
     id: "squads",
     file: "story-01-squads.html",
     title: "The New Operating Model",

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The AI-Native Thesis — AI Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400;1,700&family=Literata:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .stat-after, .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
+      .role-tag { font-family:"Montserrat",sans-serif; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:2px 6px; border-radius:4px; white-space:nowrap; }
+      .role-tag.old { background:var(--neutral-panel); color:var(--text-secondary); }
+      .role-tag.warm { background:rgba(var(--accent-rgb),0.08); color:var(--accent); }
+
+      /* Slide 4 — community outcome cards */
+      .outcome-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        width: 100%;
+      }
+      .outcome-card {
+        background: rgba(var(--accent-rgb), 0.02);
+        border: 1px solid rgba(var(--accent-rgb), 0.2);
+        border-radius: 10px;
+        padding: 1.1rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .outcome-who {
+        font-family: "Montserrat", sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .outcome-headline {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--text-primary);
+        line-height: 1.2;
+      }
+      .outcome-body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-top: 2px;
+      }
+
+      /* Graph footer line */
+      .graph-line {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-align: center;
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid rgba(var(--accent-rgb), 0.15);
+      }
+    </style>
+    <script type="application/json" id="story-meta">
+      {
+        "id": "thesis",
+        "title": "The AI-Native Thesis",
+        "author": "TBD",
+        "section": "AI Strategy",
+        "dateAdded": "2026-05-19",
+        "dateUpdated": "2026-05-19"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="bg"><div class="dots"></div></div>
+    <div id="progress"></div>
+
+    <div id="stage">
+
+      <!-- SLIDE 1: DIVIDER -->
+      <div class="slide active">
+        <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+          <div class="dots"></div>
+          <img src="Assets/Manifest-Global--Horizontal-Logo-SVG.png" alt="Manifest" style="position:absolute;top:28px;left:50%;transform:translateX(-50%);width:146px;height:auto;opacity:1;" />
+          <div class="divider-content">
+            <div class="divider-frame">
+              <div class="divider-title"><em>The AI-Native Thesis</em><br /><span>Four Agents. One Graph.</span></div>
+              <div class="rule"></div>
+            </div>
+            <div class="divider-line">
+              &#8220;Every interaction sharpens it. <em>Every improvement makes every agent smarter.</em>&#8221;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: JOURNEY -->
+      <div class="slide">
+        <div class="w-full h-full flex flex-col">
+          <div class="hbar">
+            <span class="hbar-title">The AI-Native Thesis</span>
+            <div class="mgb"><span class="ml1">TBD</span><span class="ml2">AI Strategy</span></div>
+          </div>
+          <div class="inner">
+            <div class="dots"></div>
+            <div class="content">
+              <div class="journey">
+                <div class="stage">
+                  <div class="dot alive"></div>
+                  <div class="slabel alive">A decade of<br />community interaction<br />built into a graph</div>
+                </div>
+                <div class="connector alive"></div>
+                <div class="stage">
+                  <div class="dot alive"></div>
+                  <div class="slabel alive">Frontier AI can<br />finally take the<br />heavy work at scale</div>
+                </div>
+                <div class="connector alive"></div>
+                <div class="stage">
+                  <div class="dot void"></div>
+                  <div class="slabel after">Four agents<br />activate<br />the graph</div>
+                </div>
+                <div class="connector alive"></div>
+                <div class="stage">
+                  <div class="dot void"></div>
+                  <div class="slabel after">Every interaction<br />compounds<br />the moat</div>
+                </div>
+              </div>
+              <div class="words">
+                <div class="word">Built</div>
+                <div class="word">Ready</div>
+                <div class="word">Compounding</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: FOUR AGENTS ONE GRAPH -->
+      <div class="slide">
+        <div class="w-full h-full flex flex-col">
+          <div class="hbar">
+            <span class="hbar-title">The AI-Native Thesis</span>
+            <div class="mgb"><span class="ml1">TBD</span><span class="ml2">AI Strategy</span></div>
+          </div>
+          <div class="inner">
+            <div class="dots"></div>
+            <div class="play-zone stat-board">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title">Four Agents, <em>One Graph</em></div>
+                <div class="stat-board-sub">One shared knowledge graph &mdash; every agent action makes the next one smarter.</div>
+              </div>
+              <div class="stat-grid" style="grid-template-columns:repeat(4,1fr);">
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Saige AI</span>
+                    <span class="role-tag old">Student</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">The student&rsquo;s companion</div>
+                  <div class="stat-card-foot">Fit, options, essays, deadlines &mdash; across voice, WhatsApp, email, and platform. Works with the counselor, never around them.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Mentor</span>
+                    <span class="role-tag old">Counselor</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Two more hours a day</div>
+                  <div class="stat-card-foot">Drafts status updates, parent communications, recommendation letters &mdash; so the counselor&rsquo;s time goes where only a human can.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Scout</span>
+                    <span class="role-tag old">University</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">The admissions partner</div>
+                  <div class="stat-card-foot">Faster responses to brilliant applicants, better fit-matching, stronger yield. Makes the admissions team better at the work they love.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">FlowAI</span>
+                    <span class="role-tag old">Agent</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Built for operators</div>
+                  <div class="stat-card-foot">Commission cycles, document workflows, visa outcome prediction. Faster cycles, fewer surprises, more time on the calls that close.</div>
+                </div>
+              </div>
+              <div class="graph-line">The graph beneath them compounds &mdash; every interaction sharpens it, every improvement makes every agent action smarter for every member of the community.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: WHAT CHANGES FOR EACH -->
+      <div class="slide">
+        <div class="w-full h-full flex flex-col">
+          <div class="hbar">
+            <span class="hbar-title">The AI-Native Thesis</span>
+            <div class="mgb"><span class="ml1">TBD</span><span class="ml2">AI Strategy</span></div>
+          </div>
+          <div class="inner">
+            <div class="dots"></div>
+            <div class="play-zone stat-board">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title">What <em>Changes</em> for Each</div>
+                <div class="stat-board-sub">Four communities. One shift.</div>
+              </div>
+              <div class="outcome-grid">
+                <div class="outcome-card">
+                  <div class="outcome-who">Student</div>
+                  <div class="outcome-headline">A companion that knows your journey</div>
+                  <div class="outcome-body">Fit, options, deadlines &mdash; available at midnight when the essay is due, connected to your counselor when you need them.</div>
+                </div>
+                <div class="outcome-card">
+                  <div class="outcome-who">Counselor</div>
+                  <div class="outcome-headline">Time back for the work only you can do</div>
+                  <div class="outcome-body">Judgment, listening, advocacy, relationship &mdash; the hours that matter most, freed from the hours that didn&rsquo;t need a human.</div>
+                </div>
+                <div class="outcome-card">
+                  <div class="outcome-who">University</div>
+                  <div class="outcome-headline">Your judgment reaches every applicant</div>
+                  <div class="outcome-body">Faster responses, better fit-matching, stronger yield. Your admissions team does more of what they want to be doing.</div>
+                </div>
+                <div class="outcome-card">
+                  <div class="outcome-who">Agent</div>
+                  <div class="outcome-headline">Move at the speed your work deserves</div>
+                  <div class="outcome-body">Faster commission cycles, fewer surprises, more time on the calls that close. Built for what the work actually looks like.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end #stage -->
+
+    <div id="slide-count"></div>
+    <div id="hint">&#8592; &#8594; arrow keys to navigate</div>
+    <script src="stories-index.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
