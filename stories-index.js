@@ -29,7 +29,7 @@ window.STORIES = [
   {
     id: "adfree",
     file: "story-03-adfree.html",
-    title: "One Platform. Every School.",
+    title: "The Modular Build for Cialfo",
     author: "Rajat Khanna",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
