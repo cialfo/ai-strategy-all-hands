@@ -12,7 +12,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .stat-after, .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
+      .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
+
+      /* Slide 4: invert card hierarchy — subject is the hero, status is a quiet tag */
+      .stat-card-label {
+        font-family: "Cormorant Garamond", serif !important;
+        font-size: 22px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+        color: var(--accent) !important;
+        line-height: 1.2 !important;
+      }
+      .stat-status-tag {
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 8px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-secondary);
+        background: var(--neutral-panel);
+        border: 1px solid var(--neutral-panel-hi);
+        padding: 3px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
 
       .shift-col-head { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding-bottom:5px; border-bottom:1.5px solid; margin-bottom:4px; margin-top:0.55rem; }
       .shift-col-head.old { color:var(--text-secondary); border-color:var(--neutral-panel-hi); }
@@ -196,21 +221,21 @@
                 <div class="stat-card">
                   <div class="stat-card-label">Ops Panel</div>
                   <div class="stat-card-row stat-card-row-text">
-                    <span class="stat-after stat-after-wide">In Build</span>
+                    <span class="stat-status-tag">In Build</span>
                   </div>
                   <div class="stat-card-foot">In-house platform replacing legacy CRM workflows</div>
                 </div>
                 <div class="stat-card">
                   <div class="stat-card-label">AI Signal Layer</div>
                   <div class="stat-card-row stat-card-row-text">
-                    <span class="stat-after stat-after-wide">In Build</span>
+                    <span class="stat-status-tag">In Build</span>
                   </div>
                   <div class="stat-card-foot">Escalations, blockers, and opportunities surfaced in real time</div>
                 </div>
                 <div class="stat-card">
                   <div class="stat-card-label">UG Student Placements</div>
                   <div class="stat-card-row stat-card-row-text">
-                    <span class="stat-after stat-after-wide">First Deploy</span>
+                    <span class="stat-status-tag">First Deploy</span>
                   </div>
                   <div class="stat-card-foot">First deployment for the undergraduate Student Placements cycle</div>
                 </div>
