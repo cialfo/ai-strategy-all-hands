@@ -148,8 +148,8 @@
       /* 5B — BU grid */
       .bu-grid {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 10px;
+        grid-template-columns: 2fr 1fr 1.1fr 1.5fr;
+        gap: 12px;
         width: 100%;
       }
       .bu-col { display: flex; flex-direction: column; }
@@ -157,12 +157,29 @@
         font-family: "Montserrat", sans-serif;
         font-size: 11px;
         font-weight: 700;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--accent);
         margin-bottom: 8px;
         text-align: center;
       }
+
+      /* K12 grouped column */
+      .bu-k12-group { display: flex; flex-direction: column; }
+      .bu-k12-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .bu-col-sublabel {
+        font-family: "Montserrat", sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        text-align: center;
+        padding-bottom: 5px;
+        margin-bottom: 6px;
+        border-bottom: 1px solid var(--neutral-panel-hi);
+      }
+
       .bu-squad {
         background: rgba(var(--accent-rgb), 0.02);
         border: 1px solid rgba(var(--accent-rgb), 0.2);
@@ -185,6 +202,9 @@
         margin-top: 3px;
         line-height: 1.4;
       }
+      /* K12 sub-columns get slightly tighter type */
+      .bu-k12-inner .bu-squad-name { font-size: 15px; }
+      .bu-k12-inner .bu-squad-metric { font-size: 9px; }
     </style>
     <script type="application/json" id="story-meta">
       {
@@ -467,45 +487,40 @@
               </div>
                 <div class="bu-grid" style="align-content:start;">
 
-                  <!-- K12 Cialfo -->
-                  <div class="bu-col">
-                    <div class="bu-col-label">K12 Cialfo</div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Growth &amp; New Sales</div>
-                      <div class="bu-squad-metric">Network growth and ACV expansion</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Counselor Experience</div>
-                      <div class="bu-squad-metric">NPS and time savings</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Engagement &amp; Retention</div>
-                      <div class="bu-squad-metric">Logo retention and feature adoption</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Qualified DA Students</div>
-                      <div class="bu-squad-metric">Increase DA-qualified students</div>
-                    </div>
-                  </div>
-
-                  <!-- K12 BridgeU -->
-                  <div class="bu-col">
-                    <div class="bu-col-label">K12 BridgeU</div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Growth &amp; New Sales</div>
-                      <div class="bu-squad-metric">Network growth and ACV expansion</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Counselor Experience</div>
-                      <div class="bu-squad-metric">NPS and time savings</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Engagement &amp; Retention</div>
-                      <div class="bu-squad-metric">Logo retention and feature adoption</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Qualified DA Students</div>
-                      <div class="bu-squad-metric">Increase DA-qualified students</div>
+                  <!-- K12 — Cialfo + BridgeU grouped -->
+                  <div class="bu-k12-group">
+                    <div class="bu-col-label">K12</div>
+                    <div class="bu-k12-inner">
+                      <div class="bu-col">
+                        <div class="bu-col-sublabel">Cialfo</div>
+                        <div class="bu-squad">
+                          <div class="bu-squad-name">Growth &amp; New Sales</div>
+                          <div class="bu-squad-metric">Network growth and ACV expansion</div>
+                        </div>
+                        <div class="bu-squad">
+                          <div class="bu-squad-name">Counselor Experience</div>
+                          <div class="bu-squad-metric">NPS and time savings</div>
+                        </div>
+                        <div class="bu-squad">
+                          <div class="bu-squad-name">Engagement &amp; Retention</div>
+                          <div class="bu-squad-metric">Logo retention and feature adoption</div>
+                        </div>
+                      </div>
+                      <div class="bu-col">
+                        <div class="bu-col-sublabel">BridgeU</div>
+                        <div class="bu-squad">
+                          <div class="bu-squad-name">Growth &amp; New Sales</div>
+                          <div class="bu-squad-metric">Network growth and ACV expansion</div>
+                        </div>
+                        <div class="bu-squad">
+                          <div class="bu-squad-name">Counselor Experience</div>
+                          <div class="bu-squad-metric">NPS and time savings</div>
+                        </div>
+                        <div class="bu-squad">
+                          <div class="bu-squad-name">Engagement &amp; Retention</div>
+                          <div class="bu-squad-metric">Logo retention and feature adoption</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -517,12 +532,33 @@
                       <div class="bu-squad-metric">Make attribution evidence undeniable</div>
                     </div>
                     <div class="bu-squad">
-                      <div class="bu-squad-name">Student Influence</div>
+                      <div class="bu-squad-name">Auto-Nurture Engine</div>
                       <div class="bu-squad-metric">Discovery to enrolment funnel</div>
                     </div>
                     <div class="bu-squad">
                       <div class="bu-squad-name">Third-Party Integrations</div>
                       <div class="bu-squad-metric">Unblock squads with connected data</div>
+                    </div>
+                  </div>
+
+                  <!-- Kaaiser -->
+                  <div class="bu-col">
+                    <div class="bu-col-label">Kaaiser</div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Agent Experience</div>
+                      <div class="bu-squad-metric">Win more agents, more apps per agent</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Internal Ops</div>
+                      <div class="bu-squad-metric">Reduce TAT to process &amp; enrol applications</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">University Partnerships</div>
+                      <div class="bu-squad-metric">Better terms, faster payouts</div>
+                    </div>
+                    <div class="bu-squad">
+                      <div class="bu-squad-name">Intelligence for Growth</div>
+                      <div class="bu-squad-metric">Intelligence across squads, FlowAI agent creation</div>
                     </div>
                   </div>
 
@@ -548,31 +584,6 @@
                     <div class="bu-squad">
                       <div class="bu-squad-name">Comet</div>
                       <div class="bu-squad-metric">Increase Comet revenue</div>
-                    </div>
-                  </div>
-
-                  <!-- Kaaiser -->
-                  <div class="bu-col">
-                    <div class="bu-col-label">Kaaiser</div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Agent Experience</div>
-                      <div class="bu-squad-metric">Win more agents, more apps per agent</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">Internal Ops</div>
-                      <div class="bu-squad-metric">AI-native BE ops &amp; marketing automation</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">University Partnerships</div>
-                      <div class="bu-squad-metric">Better terms, faster payouts</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">ML &amp; Data</div>
-                      <div class="bu-squad-metric">Novel ML solutions, cross-squad data layer</div>
-                    </div>
-                    <div class="bu-squad">
-                      <div class="bu-squad-name">TAT Improvement</div>
-                      <div class="bu-squad-metric">Reduce turnaround time</div>
                     </div>
                   </div>
 
