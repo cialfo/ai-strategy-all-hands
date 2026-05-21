@@ -3,7 +3,7 @@ window.STORIES = [
     id: "thesis",
     file: "story-00-thesis.html",
     title: "The AI-Native Thesis",
-    author: "TBD",
+    author: "Rohan Pasari",
     section: "AI Strategy",
     dateAdded: "2026-05-19",
     dateUpdated: "2026-05-19",
