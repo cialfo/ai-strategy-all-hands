@@ -16,8 +16,8 @@
       .ag-grid-v2 {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.75rem !important;
-        width: min(820px, 92%) !important;
+        gap: 1rem !important;
+        width: min(920px, 94%) !important;
       }
       .ag-link {
         grid-column: span 1 !important;
@@ -28,25 +28,29 @@
       .ag-link:nth-child(5) { grid-column: span 1 !important; }
 
       .ag-link .ag-card {
-        padding: 1.6rem 1.7rem !important;
-        min-height: 150px !important;
-        justify-content: flex-end !important;
+        padding: 2rem 2.2rem !important;
+        min-height: 168px !important;
+        justify-content: center !important;
         align-items: flex-start !important;
-        gap: 6px !important;
+        gap: 8px !important;
         position: relative !important;
         overflow: hidden !important;
+        border-left: 3px solid rgba(var(--accent-rgb), 0.35) !important;
+        border-radius: 0 16px 16px 0 !important;
       }
-      /* watermark number */
+      .ag-link:hover .ag-card {
+        border-left-color: var(--accent) !important;
+      }
+      /* elegant small number — top left accent */
       #slide-agenda .ag-num {
-        position: absolute !important;
-        top: 14px !important;
-        right: 18px !important;
-        font-family: "Roboto", sans-serif !important;
-        font-size: 28px !important;
+        position: static !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 11px !important;
         font-weight: 700 !important;
-        color: var(--text-primary) !important;
-        opacity: 0.07 !important;
-        letter-spacing: 0 !important;
+        color: rgba(var(--accent-rgb), 0.6) !important;
+        letter-spacing: 0.22em !important;
+        opacity: 1 !important;
+        margin-bottom: 2px !important;
         pointer-events: none !important;
         line-height: 1 !important;
       }
@@ -64,11 +68,11 @@
         letter-spacing: 0.18em !important;
         text-transform: uppercase !important;
         color: var(--accent) !important;
-        margin-top: 4px !important;
+        margin-top: 6px !important;
       }
-      /* tighten header so logo doesn't crowd */
+      /* header spacing */
       #slide-agenda .ag-header {
-        margin-bottom: 0.9rem !important;
+        margin-bottom: 0.6rem !important;
       }
     </style>
   </head>
@@ -83,10 +87,10 @@
         <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
           <div class="dots"></div>
           <div class="s1-content">
-            <div class="mg-frame" style="display:inline-flex;align-items:center;justify-content:center;padding:2rem;">
+            <div style="display:inline-flex;align-items:center;justify-content:center;">
               <img src="Assets/Manifest-Global--Horizontal-Logo-SVG.png"
                    alt="Manifest Global"
-                   style="width:680px;height:auto;display:block;" />
+                   style="width:560px;height:auto;display:block;opacity:0.95;" />
             </div>
             <div class="s1-bottom">
               <div class="s1-date" style="font-family:'Literata',Georgia,serif;font-style:normal;font-weight:400;letter-spacing:0.02em;text-transform:none;font-size:34px;">AI Strategy at Manifest</div>
