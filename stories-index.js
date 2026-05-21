@@ -2,7 +2,7 @@ window.STORIES = [
   {
     id: "thesis",
     file: "story-00-thesis.html",
-    title: "The AI-Native Thesis",
+    title: "Four Agents · One Graph",
     author: "Rohan Pasari",
     section: "AI Strategy",
     dateAdded: "2026-05-19",
