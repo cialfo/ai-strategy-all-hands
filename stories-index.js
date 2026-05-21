@@ -39,7 +39,7 @@ window.STORIES = [
     id: "admin",
     file: "story-04-admin.html",
     title: "The Manifest AI Brain",
-    author: "William Hund",
+    author: "Hitendra Kumar",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
     dateUpdated: "2026-05-18",

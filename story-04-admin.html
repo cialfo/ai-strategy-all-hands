@@ -15,30 +15,16 @@
       .stat-after, .stat-card-foot { font-family: "Literata", Georgia, serif !important; }
       .role-tag { font-family:"Montserrat",sans-serif; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:2px 6px; border-radius:4px; white-space:nowrap; }
       .role-tag.old { background:var(--neutral-panel); color:var(--text-secondary); }
-
-      /* Journey: more breathing room between nodes */
-      #stage .journey .connector { min-width: 90px !important; max-width: 130px !important; }
-      #stage .journey .slabel { font-size: 24px !important; }
-
-      .shift-col-head { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding-bottom:5px; border-bottom:1.5px solid; margin-bottom:4px; margin-top:0.55rem; }
-      .shift-col-head.old { color:var(--text-secondary); border-color:var(--neutral-panel-hi); }
-      .shift-col-head.warm { color:var(--accent); border-color:var(--accent); }
-      .shift-table { display:flex; flex-direction:column; width:100%; }
-      .shift-row { display:flex; align-items:center; gap:8px; padding:9px 0; border-bottom:1px solid var(--neutral-panel-hi); }
-      .shift-row:last-child { border-bottom:none; }
-      .shift-text { font-family:"Cormorant Garamond",serif; font-size:17px; font-weight:600; color:var(--text-primary); flex:1; line-height:1.2; }
-      .role-tag { font-family:"Montserrat",sans-serif; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:2px 6px; border-radius:4px; white-space:nowrap; }
-      .role-tag.old { background:var(--neutral-panel); color:var(--text-secondary); }
       .role-tag.warm { background:rgba(var(--accent-rgb),0.08); color:var(--accent); }
     </style>
     <script type="application/json" id="story-meta">
       {
         "id": "admin",
         "title": "The Manifest AI Brain",
-        "author": "William Hund",
+        "author": "Hitendra Kumar",
         "section": "AI Strategy",
         "dateAdded": "2026-05-18",
-        "dateUpdated": "2026-05-18"
+        "dateUpdated": "2026-05-21"
       }
     </script>
   </head>
@@ -55,140 +41,22 @@
           <img src="Assets/Manifest-Global--Horizontal-Logo-SVG.png" alt="Manifest" style="position:absolute;top:28px;left:50%;transform:translateX(-50%);width:146px;height:auto;opacity:1;" />
           <div class="divider-content">
             <div class="divider-frame">
-              <div class="divider-title"><em>The Manifest AI Brain</em><br /><span>The Panel That Thinks</span></div>
+              <div class="divider-title"><em>The Manifest AI Brain</em><br /><span>Intelligence at the Centre</span></div>
               <div class="rule"></div>
             </div>
             <div class="divider-line">
-              &#8220;The panel thinks. <em>The operation moves.</em>&#8221;
+              &#8220;AI should not be a tool your company uses. <em>It should be the operating system your company runs on.</em>&#8221;
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 2: JOURNEY -->
+      <!-- SLIDE 2: NOT A TOOL — AN OS -->
       <div class="slide">
         <div class="w-full h-full flex flex-col">
           <div class="hbar">
             <span class="hbar-title">The Manifest AI Brain</span>
-            <div class="mgb"><span class="ml1">William Hund</span><span class="ml2">AI Strategy</span></div>
-          </div>
-          <div class="inner">
-            <div class="dots"></div>
-            <div class="content">
-              <div class="journey">
-                <div class="stage">
-                  <div class="dot alive"></div>
-                  <div class="slabel alive">Airtable<br />the needed scaffold</div>
-                </div>
-                <div class="connector alive"></div>
-                <div class="stage">
-                  <div class="dot alive"></div>
-                  <div class="slabel alive">Ops scaled &mdash;<br />ready for native</div>
-                </div>
-                <div class="connector alive"></div>
-                <div class="stage">
-                  <div class="dot alive"></div>
-                  <div class="slabel after">Manifest<br />Admin Panel</div>
-                </div>
-                <div class="connector alive"></div>
-                <div class="stage">
-                  <div class="dot alive"></div>
-                  <div class="slabel after">Native Intelligence<br />not bolted on</div>
-                </div>
-              </div>
-              <div class="words">
-                <div class="word">Improvised</div>
-                <div class="word">Outgrown</div>
-                <div class="word">Sovereign</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 3: THE SHIFT TABLE -->
-      <div class="slide">
-        <div class="w-full h-full flex flex-col">
-          <div class="hbar">
-            <span class="hbar-title">The Manifest AI Brain</span>
-            <div class="mgb"><span class="ml1">William Hund</span><span class="ml2">AI Strategy</span></div>
-          </div>
-          <div class="inner" style="padding:2rem 2.8rem;">
-            <div class="dots"></div>
-            <div class="play-zone stat-board" style="align-items:stretch;width:100%;max-width:none;padding:1.2rem 1.6rem;">
-              <div class="corner tl"></div><div class="corner tr"></div>
-              <div class="corner bl"></div><div class="corner br"></div>
-              <div class="stat-board-header">
-                <div class="stat-board-title">From Scaffold. <span style="color:var(--accent);font-style:normal;">To Intelligence.</span></div>
-              </div>
-              <div style="display:flex;flex-direction:row;gap:2rem;align-items:flex-start;">
-
-                <!-- Old Way -->
-                <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
-                  <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
-                    <div class="state-icon cold" style="margin:0;">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,100,100,0.8)" stroke-width="1.5">
-                        <rect x="2" y="3" width="20" height="14" rx="2"/>
-                        <path d="M8 21h8M12 17v4"/>
-                        <path d="M6 8h5M6 11h8M6 14h4"/>
-                      </svg>
-                    </div>
-                    <div class="state-word" style="margin:0;">Airtable</div>
-                  </div>
-                  <div style="background:var(--neutral-panel);border:1px solid var(--neutral-panel-hi);border-radius:10px;padding:1rem 1.2rem;">
-                    <div class="shift-col-head old">Where Airtable hits its ceiling</div>
-                    <div class="shift-table">
-                      <div class="shift-row"><span class="shift-text">Not built to scale with the operation</span><span class="role-tag old">Constrained</span></div>
-                      <div class="shift-row"><span class="shift-text">Data spread across bases &mdash; no clean reporting line</span><span class="role-tag old">Visibility</span></div>
-                      <div class="shift-row"><span class="shift-text">No clean exit &mdash; migration carries real cost</span><span class="role-tag old">Costly</span></div>
-                      <div class="shift-row"><span class="shift-text">Switching CRMs trades one ceiling for another</span><span class="role-tag old">Locked</span></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Arrow -->
-                <div class="arrow-wrap" style="flex-shrink:0;align-self:center;margin-top:3.2rem;">
-                  <div class="arrow-track relative">
-                    <div class="arrow-tail"></div>
-                    <div class="arrow-glow"></div>
-                    <div class="arrow-point"></div>
-                  </div>
-                  <div class="arrow-label">The Shift</div>
-                </div>
-
-                <!-- New Way -->
-                <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
-                  <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
-                    <div class="state-icon warm" style="margin:0;">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="rgba(204,0,0,0.9)" stroke-width="1.5">
-                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                      </svg>
-                    </div>
-                    <div class="state-word warm" style="margin:0;">Admin Panel</div>
-                  </div>
-                  <div style="background:rgba(var(--accent-rgb),0.02);border:1px solid rgba(var(--accent-rgb),0.28);border-radius:10px;padding:1rem 1.2rem;">
-                    <div class="shift-col-head warm">What the Manifest Admin Panel gives you</div>
-                    <div class="shift-table">
-                      <div class="shift-row"><span class="shift-text">One panel &mdash; every operator, every signal</span><span class="role-tag warm">Unified</span></div>
-                      <div class="shift-row"><span class="shift-text">Built from scratch for how our ops actually runs</span><span class="role-tag warm">Native</span></div>
-                      <div class="shift-row"><span class="shift-text">Escalations, blockers, opportunities &mdash; surfaced before they land</span><span class="role-tag warm">Signal</span></div>
-                      <div class="shift-row"><span class="shift-text">What works inside our ops ships back into the product</span><span class="role-tag warm">Leverage</span></div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 4: WHAT'S IN FLIGHT -->
-      <div class="slide">
-        <div class="w-full h-full flex flex-col">
-          <div class="hbar">
-            <span class="hbar-title">The Manifest AI Brain</span>
-            <div class="mgb"><span class="ml1">William Hund</span><span class="ml2">AI Strategy</span></div>
+            <div class="mgb"><span class="ml1">Hitendra Kumar</span><span class="ml2">AI Strategy</span></div>
           </div>
           <div class="inner">
             <div class="dots"></div>
@@ -196,33 +64,143 @@
               <div class="corner tl"></div><div class="corner tr"></div>
               <div class="corner bl"></div><div class="corner br"></div>
               <div class="stat-board-header">
-                <div class="stat-board-title">What&#8217;s <em>In Flight</em></div>
-                <div class="stat-board-sub">Intelligence Layer squad — in build &middot; First deployment: UG Student Placements 2027&ndash;28 cycle</div>
+                <div class="stat-board-title">Not a Tool. <em>An Operating System.</em></div>
+                <div class="stat-board-sub">Every workflow, every decision, every process flows through an intelligent layer that is constantly learning and improving.</div>
+              </div>
+              <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);">
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">The OS</span>
+                    <span class="role-tag old">Foundation</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Not a copilot. Not a feature.</div>
+                  <div class="stat-card-foot">Every workflow, every decision, every process flows through an intelligent layer that is constantly learning and improving.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Closed Loop</span>
+                    <span class="role-tag old">Self-Regulating</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Every signal captured and fed back.</div>
+                  <div class="stat-card-foot">The system continuously monitors its output and adjusts to better meet the goal. Ops improves without intervention.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Queryable</span>
+                    <span class="role-tag old">Always Legible</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">The full organisation visible to intelligence.</div>
+                  <div class="stat-card-foot">Every important action produces an artifact. The intelligence at the centre learns from everything and uses it to self-improve.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">No Middleware</span>
+                    <span class="role-tag old">Humans at the Edge</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Information flows straight to intelligence.</div>
+                  <div class="stat-card-foot">Every layer of human routing removed is a direct speed gain. The company&rsquo;s velocity is only as fast as its information flow.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: WHAT CHANGES WHEN THE LOOP CLOSES -->
+      <div class="slide">
+        <div class="w-full h-full flex flex-col">
+          <div class="hbar">
+            <span class="hbar-title">The Manifest AI Brain</span>
+            <div class="mgb"><span class="ml1">Hitendra Kumar</span><span class="ml2">AI Strategy</span></div>
+          </div>
+          <div class="inner">
+            <div class="dots"></div>
+            <div class="play-zone stat-board">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title">What Changes <em>When the Loop Closes</em></div>
+                <div class="stat-board-sub">What used to require constant coordination becomes legible and queryable by default.</div>
+              </div>
+              <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);">
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Self-Writing</span>
+                    <span class="role-tag old">Status</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Status updates that write themselves</div>
+                  <div class="stat-card-foot">No lossy rollups. No manually interpreted reports. The system always has an up-to-date view of what is actually happening.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Pre-Surfaced</span>
+                    <span class="role-tag old">Escalations</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Escalations before anyone escalates</div>
+                  <div class="stat-card-foot">Blockers and opportunities surfaced in real time — before they become problems, not after coordination has already failed.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Predictable</span>
+                    <span class="role-tag old">Planning</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Plans that know what actually shipped</div>
+                  <div class="stat-card-foot">Agents propose sprint plans based on what was built and how well it met real needs — not on what was said in a standup.</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Compounding</span>
+                    <span class="role-tag old">Always Learning</span>
+                  </div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">An org that improves without being told to</div>
+                  <div class="stat-card-foot">Every action produces an artifact. The intelligence at the centre learns from everything — and uses it to continuously self-improve.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: THE TEAM THAT RUNS IT -->
+      <div class="slide">
+        <div class="w-full h-full flex flex-col">
+          <div class="hbar">
+            <span class="hbar-title">The Manifest AI Brain</span>
+            <div class="mgb"><span class="ml1">Hitendra Kumar</span><span class="ml2">AI Strategy</span></div>
+          </div>
+          <div class="inner">
+            <div class="dots"></div>
+            <div class="play-zone stat-board">
+              <div class="corner tl"></div><div class="corner tr"></div>
+              <div class="corner bl"></div><div class="corner br"></div>
+              <div class="stat-board-header">
+                <div class="stat-board-title">The Team <em>That Runs It</em></div>
+                <div class="stat-board-sub">With a queryable, artifact-rich, intelligence-first organisation — almost no human middleware. Three archetypes, one direction.</div>
               </div>
               <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);">
                 <div class="stat-card">
                   <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
-                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Ops Panel</span>
-                    <span class="role-tag old">In Build</span>
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">Builder · IC</span>
+                    <span class="role-tag old">Individual Contributor</span>
                   </div>
-                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Replaces the legacy CRM</div>
-                  <div class="stat-card-foot">In-house platform built for how the ops team actually works</div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Everyone ships. Everyone ops.</div>
+                  <div class="stat-card-foot">Not limited to engineers. Everyone builds. Everyone comes to meetings with working prototypes &mdash; not pitch decks.</div>
                 </div>
                 <div class="stat-card">
                   <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
-                    <span class="stat-after stat-after-wide" style="color:var(--accent);">AI Signal Layer</span>
-                    <span class="role-tag old">In Build</span>
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">DRI</span>
+                    <span class="role-tag old">Directly Responsible</span>
                   </div>
-                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Surfaces what matters</div>
-                  <div class="stat-card-foot">Escalations, blockers, and opportunities in real time</div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">One outcome. One owner. No hiding.</div>
+                  <div class="stat-card-foot">Not a classic manager &mdash; the person with clear responsibility for the result. Strategy and customer outcomes, full stop.</div>
                 </div>
                 <div class="stat-card">
                   <div class="stat-card-row stat-card-row-text" style="align-items:center;gap:0.6rem;">
-                    <span class="stat-after stat-after-wide" style="color:var(--accent);">UG Student Placements</span>
-                    <span class="role-tag old">First Deploy</span>
+                    <span class="stat-after stat-after-wide" style="color:var(--accent);">AI Founder</span>
+                    <span class="role-tag old">At the Front</span>
                   </div>
-                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">First live cycle</div>
-                  <div class="stat-card-foot">First deployment for the undergraduate Student Placements 2027–28 cycle</div>
+                  <div class="stat-card-foot" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary);margin-top:0.3rem;">Showing the team what&rsquo;s possible.</div>
+                  <div class="stat-card-foot">Still builds. Still coaches. At the forefront of what massive capability gains look like &mdash; not delegating the AI strategy to someone else.</div>
                 </div>
               </div>
             </div>
