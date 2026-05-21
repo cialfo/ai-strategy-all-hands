@@ -20,7 +20,7 @@ window.STORIES = [
   {
     id: "techdebt",
     file: "story-02-techdebt.html",
-    title: "The Precondition",
+    title: "The Growth",
     author: "Haseeb Elahi",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
@@ -38,7 +38,7 @@ window.STORIES = [
   {
     id: "admin",
     file: "story-04-admin.html",
-    title: "Manifest Intelligence",
+    title: "The Manifest AI Brain",
     author: "William Hund",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
