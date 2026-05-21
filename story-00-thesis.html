@@ -124,13 +124,26 @@
             <path d="M 450 238 C 530 238 680 250 900 250" fill="none" stroke="rgba(204,0,0,0.32)" stroke-width="1.1" stroke-dasharray="6 4"/>
             <path d="M 450 238 C 530 238 680 294 900 294" fill="none" stroke="rgba(204,0,0,0.58)" stroke-width="1.7"/>
             <path d="M 450 238 C 530 238 680 358 900 358" fill="none" stroke="rgba(204,0,0,0.72)" stroke-width="2.2"/>
-            <!-- Rings -->
-            <circle cx="450" cy="238" r="68" fill="none" stroke="rgba(204,0,0,0.13)" stroke-width="1" stroke-dasharray="4 4"/>
-            <circle cx="450" cy="238" r="46" fill="none" stroke="rgba(204,0,0,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
-            <!-- Center node -->
-            <circle cx="450" cy="238" r="20" fill="rgba(204,0,0,0.92)"/>
-            <!-- Manifest label -->
-            <text x="450" y="325" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="28" font-weight="700" letter-spacing="0.04em" fill="rgba(204,0,0,0.92)">Manifest</text>
+            <!-- Pulse rings — expand outward from center -->
+            <circle cx="450" cy="238" r="20" fill="none" stroke="rgba(204,0,0,0.55)" stroke-width="1.5">
+              <animate attributeName="r" from="20" to="95" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+              <animate attributeName="opacity" from="0.55" to="0" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+            </circle>
+            <circle cx="450" cy="238" r="20" fill="none" stroke="rgba(204,0,0,0.55)" stroke-width="1.5">
+              <animate attributeName="r" from="20" to="95" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+              <animate attributeName="opacity" from="0.55" to="0" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+            </circle>
+            <circle cx="450" cy="238" r="20" fill="none" stroke="rgba(204,0,0,0.55)" stroke-width="1.5">
+              <animate attributeName="r" from="20" to="95" dur="2.4s" repeatCount="indefinite" begin="1.6s"/>
+              <animate attributeName="opacity" from="0.55" to="0" dur="2.4s" repeatCount="indefinite" begin="1.6s"/>
+            </circle>
+            <!-- Center node — gentle pulse -->
+            <circle cx="450" cy="238" fill="rgba(204,0,0,0.92)">
+              <animate attributeName="r" values="18;22;18" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.88;1;0.88" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Manifest label — moved further down -->
+            <text x="450" y="342" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="28" font-weight="700" letter-spacing="0.04em" fill="rgba(204,0,0,0.92)">Manifest</text>
             <!-- Top labels -->
             <text x="22" y="82" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" letter-spacing="0.15em" fill="rgba(20,20,20,0.88)">TALENT INFRASTRUCTURE</text>
             <line x1="22" y1="90" x2="360" y2="90" stroke="rgba(20,20,20,0.5)" stroke-width="0.8"/>
