@@ -11,7 +11,7 @@ window.STORIES = [
   {
     id: "techdebt",
     file: "story-02-techdebt.html",
-    title: "The Growth",
+    title: "The Ground We Build On",
     author: "Haseeb Elahi",
     section: "AI Strategy",
     dateAdded: "2026-05-18",
