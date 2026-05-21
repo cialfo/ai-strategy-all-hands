@@ -45,6 +45,15 @@ window.STORIES = [
     dateUpdated: "2026-05-18",
   },
   // {
+  //   id: "confluence",
+  //   file: "story-06-confluence.html",
+  //   title: "Talent × AI",
+  //   author: "Rohan Pasari",
+  //   section: "AI Strategy",
+  //   dateAdded: "2026-05-21",
+  //   dateUpdated: "2026-05-21",
+  // },
+  // {
   //   id: "airtable",
   //   file: "story-05-airtable.html",
   //   title: "Airtable as Velocity Layer",

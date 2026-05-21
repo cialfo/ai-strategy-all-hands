@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talent × AI — AI Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400;1,700&family=Literata:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/json" id="story-meta">
+      {
+        "id": "confluence",
+        "title": "Talent × AI",
+        "author": "Rohan Pasari",
+        "section": "AI Strategy",
+        "dateAdded": "2026-05-21",
+        "dateUpdated": "2026-05-21"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="bg"><div class="dots"></div></div>
+    <div id="progress"></div>
+
+    <div id="stage">
+
+      <!-- SLIDE 1: THE CONFLUENCE VISUAL -->
+      <div class="slide active">
+        <div class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+          <div class="dots"></div>
+          <img src="Assets/Manifest-Global--Horizontal-Logo-SVG.png" alt="Manifest" style="position:absolute;top:28px;left:50%;transform:translateX(-50%);width:146px;height:auto;opacity:1;" />
+
+          <svg viewBox="0 0 800 430" style="width:84%;max-width:860px;overflow:visible;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Glow for AI center node -->
+              <filter id="glow-ai" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <!-- Glow for intersection point -->
+              <filter id="glow-mid" x="-120%" y="-120%" width="340%" height="340%">
+                <feGaussianBlur stdDeviation="10" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <!-- Soft intersection zone -->
+              <radialGradient id="int-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(204,0,0,0.14)"/>
+                <stop offset="100%" stop-color="rgba(204,0,0,0)"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Intersection glow zone -->
+            <ellipse cx="400" cy="205" rx="75" ry="75" fill="url(#int-glow)"/>
+
+            <!-- ============================================ -->
+            <!-- LEFT ORBITAL — TALENT  center (265, 205)    -->
+            <!-- ============================================ -->
+
+            <!-- Ring 1: large, flat, CW 22s -->
+            <g>
+              <ellipse cx="265" cy="205" rx="188" ry="54" fill="none" stroke="rgba(20,20,20,0.13)" stroke-width="1"/>
+              <circle cx="398" cy="252" r="2.5" fill="rgba(20,20,20,0.32)"/>
+              <circle cx="132" cy="158" r="2.5" fill="rgba(20,20,20,0.32)"/>
+              <animateTransform attributeName="transform" attributeType="XML"
+                type="rotate" from="-20 265 205" to="340 265 205"
+                dur="22s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Ring 2: medium, tilted, CCW 16s -->
+            <g>
+              <ellipse cx="265" cy="205" rx="150" ry="44" fill="none" stroke="rgba(20,20,20,0.17)" stroke-width="1"/>
+              <circle cx="340" cy="243" r="2.5" fill="rgba(20,20,20,0.3)"/>
+              <circle cx="190" cy="167" r="2.5" fill="rgba(20,20,20,0.3)"/>
+              <animateTransform attributeName="transform" attributeType="XML"
+                type="rotate" from="40 265 205" to="-320 265 205"
+                dur="16s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Ring 3: inner, near-vertical, CW 32s -->
+            <g>
+              <ellipse cx="265" cy="205" rx="88" ry="82" fill="none" stroke="rgba(20,20,20,0.11)" stroke-width="1"/>
+              <circle cx="309" cy="276" r="2" fill="rgba(20,20,20,0.25)"/>
+              <circle cx="221" cy="134" r="2" fill="rgba(20,20,20,0.25)"/>
+              <animateTransform attributeName="transform" attributeType="XML"
+                type="rotate" from="65 265 205" to="425 265 205"
+                dur="32s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Talent center node -->
+            <circle cx="265" cy="205" r="6" fill="rgba(20,20,20,0.65)"/>
+
+            <!-- Talent labels -->
+            <text x="265" y="316" text-anchor="middle"
+              font-family="Montserrat,sans-serif" font-size="9.5" font-weight="700"
+              letter-spacing="0.22em" fill="rgba(20,20,20,0.38)">TALENT</text>
+            <text x="265" y="329" text-anchor="middle"
+              font-family="Montserrat,sans-serif" font-size="7.5" font-weight="400"
+              letter-spacing="0.14em" fill="rgba(20,20,20,0.24)">INFRASTRUCTURE</text>
+
+            <!-- ============================================ -->
+            <!-- RIGHT ORBITAL — AI  center (535, 205)       -->
+            <!-- ============================================ -->
+
+            <!-- Ring 1: large, flat, CCW 18s -->
+            <g>
+              <ellipse cx="535" cy="205" rx="188" ry="54" fill="none" stroke="rgba(204,0,0,0.18)" stroke-width="1"/>
+              <circle cx="668" cy="158" r="2.5" fill="rgba(204,0,0,0.42)"/>
+              <circle cx="402" cy="252" r="2.5" fill="rgba(204,0,0,0.42)"/>
+              <animateTransform attributeName="transform" attributeType="XML"
+                type="rotate" from="20 535 205" to="-340 535 205"
+                dur="18s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Ring 2: medium, tilted, CW 13s -->
+            <g>
+              <ellipse cx="535" cy="205" rx="150" ry="44" fill="none" stroke="rgba(204,0,0,0.22)" stroke-width="1"/>
+              <circle cx="610" cy="167" r="2.5" fill="rgba(204,0,0,0.48)"/>
+              <circle cx="460" cy="243" r="2.5" fill="rgba(204,0,0,0.48)"/>
+              <animateTransform attributeName="transform" attributeType="XML"
+                type="rotate" from="-40 535 205" to="320 535 205"
+                dur="13s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Ring 3: inner, near-vertical, CCW 26s -->
+            <g>
+              <ellipse cx="535" cy="205" rx="88" ry="82" fill="none" stroke="rgba(204,0,0,0.17)" stroke-width="1.5"/>
+              <circle cx="579" cy="134" r="2" fill="rgba(204,0,0,0.52)"/>
+              <circle cx="491" cy="276" r="2" fill="rgba(204,0,0,0.52)"/>
+              <animateTransform attributeName="transform" attributeType="XML"
+                type="rotate" from="-65 535 205" to="295 535 205"
+                dur="26s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- AI center node with glow -->
+            <circle cx="535" cy="205" r="6" fill="rgba(204,0,0,0.85)" filter="url(#glow-ai)"/>
+
+            <!-- AI label -->
+            <text x="535" y="316" text-anchor="middle"
+              font-family="Montserrat,sans-serif" font-size="9.5" font-weight="700"
+              letter-spacing="0.22em" fill="rgba(204,0,0,0.55)">AI</text>
+
+            <!-- Intersection point -->
+            <circle cx="400" cy="205" r="3.5" fill="rgba(204,0,0,0.6)" filter="url(#glow-mid)"/>
+
+          </svg>
+
+        </div>
+      </div>
+
+    </div><!-- end #stage -->
+
+    <div id="slide-count"></div>
+    <div id="hint">&#8592; &#8594; arrow keys to navigate</div>
+    <script src="stories-index.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
