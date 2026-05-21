@@ -1,8 +1,8 @@
 :root,
 html {
-  --bg-page: #fff5f2;
-  --bg-carousel: #fff5f2;
-  --bg-chip: rgba(255, 245, 242, 0.82);
+  --bg-page: #fef8ee;
+  --bg-carousel: #fef8ee;
+  --bg-chip: rgba(254, 248, 238, 0.82);
   --text-primary: #141414;
   --text-body: rgba(20, 20, 20, 0.92);
   --text-muted: rgba(20, 20, 20, 0.72);
@@ -14,7 +14,7 @@ html {
   --dot-color: rgba(80, 50, 0, 0.08);
   --neutral-panel: rgba(20, 20, 20, 0.05);
   --neutral-panel-hi: rgba(20, 20, 20, 0.2);
-  --nav-surface: rgba(255, 245, 242, 0.85);
+  --nav-surface: rgba(254, 248, 238, 0.85);
 }
 *,
 *::before,
