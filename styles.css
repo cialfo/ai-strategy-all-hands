@@ -14,7 +14,7 @@ html {
   --dot-color: rgba(80, 50, 0, 0.08);
   --neutral-panel: rgba(20, 20, 20, 0.05);
   --neutral-panel-hi: rgba(20, 20, 20, 0.2);
-  --nav-surface: rgba(255, 250, 230, 0.65);
+  --nav-surface: rgba(255, 245, 242, 0.85);
 }
 *,
 *::before,
