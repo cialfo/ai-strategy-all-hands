@@ -1,8 +1,8 @@
 :root,
 html {
-  --bg-page: #f7f1df;
-  --bg-carousel: #fbf6e6;
-  --bg-chip: rgba(247, 241, 223, 0.82);
+  --bg-page: #fef8ee;
+  --bg-carousel: #fef8ee;
+  --bg-chip: rgba(254, 248, 238, 0.82);
   --text-primary: #141414;
   --text-body: rgba(20, 20, 20, 0.92);
   --text-muted: rgba(20, 20, 20, 0.72);
